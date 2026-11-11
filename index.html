@@ -177,6 +177,8 @@
   .type h3{font-size:23px;margin-bottom:6px}
   .type p{color:var(--muted);font-size:14.5px}
   .type .dur{margin-top:14px;font-weight:700;color:var(--navy);font-size:14px}
+  .type .fee{color:#9a7535}
+  .type .fee-note{font-size:12.5px;margin-top:6px}
   .book-panel{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
   .pay-step{display:none;padding:56px 40px;text-align:center}
   .pay-step.show{display:block}
@@ -360,7 +362,7 @@
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Student &amp; exam stress</div>
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Sleep problems &amp; overthinking</div>
         </div>
-        <div class="counsel-meta"><span><b>45 min</b> online session</span><span><b>100%</b> confidential</span><span><b>Malayalam</b> &amp; English</span></div>
+        <div class="counsel-meta"><span><b>₹1,000</b> per session</span><span><b>45 min</b> online session</span><span><b>100%</b> confidential</span><span><b>Malayalam</b> &amp; English</span></div>
         <div class="hero-actions">
           <a href="#book" class="btn btn-navy" data-type="online-psychological-counselling">Book a counselling session</a>
           <a href="https://wa.me/917902558507?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20counselling%20sessions" target="_blank" rel="noopener" class="btn btn-ghost">Ask on WhatsApp</a>
@@ -464,15 +466,15 @@
       <div class="types">
         <button class="type active" data-type="online-psychological-counselling">
           <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z"/></svg></span><span class="pill">Featured</span></div>
-          <h3>Psychological Counselling</h3><p>Private one-to-one session by video.</p><div class="dur">45 minutes · Online</div>
+          <h3>Psychological Counselling</h3><p>Private one-to-one session by video.</p><div class="dur">45 minutes · Online · <span class="fee">₹1,000</span></div>
         </button>
         <button class="type" data-type="online-video-consultation">
           <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3"/></svg></span></div>
-          <h3>Online Consultation</h3><p>Homoeopathy &amp; nutrition by video.</p><div class="dur">30 minutes · Online</div>
+          <h3>Online Consultation</h3><p>Homoeopathy &amp; nutrition by video.</p><div class="dur">30 minutes · Online · <span class="fee">₹300</span></div><p class="fee-note">Consultation fee only — medicines charged separately</p>
         </button>
         <button class="type" data-type="in-clinic-visit">
           <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg></span></div>
-          <h3>Clinic Visit</h3><p>In person at Irumbuzhi, Malappuram.</p><div class="dur">Mon – Sat · In clinic</div>
+          <h3>Clinic Visit</h3><p>In person at Irumbuzhi, Malappuram.</p><div class="dur">Mon – Sat · In clinic · Pay at clinic</div>
         </button>
       </div>
       <div class="book-panel">
@@ -583,11 +585,11 @@
      UPI_NAME: name patients see when paying
      FEES:     fee in rupees for each type. 0 = no online payment (pay at clinic)
   ---------------------------------------------- */
-  const UPI_ID = '';
-  const UPI_NAME = 'Dr Murshida K K';
+  const UPI_ID = 'drmurshidakk@oksbi';
+  const UPI_NAME = 'Murshida K K';
   const FEES = {
-    'online-psychological-counselling': 0,
-    'online-video-consultation': 0,
+    'online-psychological-counselling': 1000,
+    'online-video-consultation': 300,
     'in-clinic-visit': 0
   };
   const CAL = 'https://cal.com/dr-mohammed-mirshad-7n1ksu/';
@@ -606,8 +608,8 @@
     const fee = FEES[type];
     if (UPI_ID && fee > 0) {
       const upi = 'upi://pay?pa=' + encodeURIComponent(UPI_ID) + '&pn=' + encodeURIComponent(UPI_NAME) + '&am=' + fee.toFixed(2) + '&cu=INR&tn=' + encodeURIComponent(LABEL[type]);
-      document.getElementById('payAmt').textContent = '₹' + fee;
-      document.getElementById('upiAmt2').textContent = '₹' + fee;
+      document.getElementById('payAmt').textContent = '₹' + fee.toLocaleString('en-IN');
+      document.getElementById('upiAmt2').textContent = '₹' + fee.toLocaleString('en-IN');
       document.getElementById('upiName').textContent = UPI_NAME;
       document.getElementById('upiId').textContent = UPI_ID;
       const box = document.getElementById('upiQr'); box.innerHTML = '';
