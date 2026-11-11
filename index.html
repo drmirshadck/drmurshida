@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b2e4f'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-size='28' fill='%23d9b779' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy:#0b2e4f; --navy-2:#071f37; --navy-3:#123f69; --blue:#1a8fd0; --sky:#9fd8f5; --sky-2:#e6f4fc;
@@ -18,7 +18,7 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:"Playfair Display",Georgia,serif;color:var(--navy);line-height:1.12;font-weight:600}
+  h1,h2,h3{font-family:Montserrat,system-ui,sans-serif;color:var(--navy);line-height:1.12;font-weight:600}
   h4{font-weight:700;color:var(--navy)}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
@@ -50,8 +50,8 @@
   header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px}
   .logo{display:flex;align-items:center;gap:14px}
-  .logo-mark{width:46px;height:46px;border-radius:14px;background:var(--navy);color:var(--gold-2);display:grid;place-items:center;font:600 22px "Playfair Display"}
-  .logo b{display:block;font:600 19px "Playfair Display";color:var(--navy)}
+  .logo-mark{width:46px;height:46px;border-radius:14px;background:var(--navy);color:var(--gold-2);display:grid;place-items:center;font:600 22px Montserrat}
+  .logo b{display:block;font:600 19px Montserrat;color:var(--navy)}
   .logo small{display:block;font-size:12px;color:var(--muted);letter-spacing:.3px}
   .menu{display:flex;gap:30px;font-weight:600;font-size:15px;color:var(--navy)}
   .menu a{position:relative}
@@ -86,7 +86,7 @@
   .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
   .trust div{padding:34px 24px;border-right:1px solid var(--line)}
   .trust div:last-child{border-right:0}
-  .trust b{display:block;font:600 30px "Playfair Display";color:var(--navy)}
+  .trust b{display:block;font:600 30px Montserrat;color:var(--navy)}
   .trust span{color:var(--muted);font-size:14.5px}
 
   /* counselling feature */
@@ -95,7 +95,7 @@
   .counsel-photo{position:relative}
   .counsel-photo .main{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow)}
   .counsel-photo .main div{width:100%;height:100%}
-  .counsel-photo .quote{position:absolute;right:-36px;bottom:40px;max-width:270px;background:var(--navy);color:#e3edf6;padding:24px 26px;border-radius:22px;box-shadow:var(--shadow);font:italic 500 17px/1.5 "Playfair Display"}
+  .counsel-photo .quote{position:absolute;right:-36px;bottom:40px;max-width:270px;background:var(--navy);color:#e3edf6;padding:24px 26px;border-radius:22px;box-shadow:var(--shadow);font:italic 500 17px/1.5 Montserrat}
   .counsel-photo .quote small{display:block;margin-top:10px;font:600 12.5px Manrope;color:var(--gold-2);font-style:normal;letter-spacing:1px;text-transform:uppercase}
   .tag-feature{display:inline-block;background:var(--navy);color:var(--gold-2);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:7px 14px;border-radius:999px;margin-bottom:16px}
   .concerns{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:30px 0 34px}
@@ -130,7 +130,7 @@
   .doc-photos .tall{grid-row:span 2}
   .doc-photos .tall div,.doc-photos .s div{width:100%;height:100%}
   .doc-photos .badge{background:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:26px;box-shadow:none}
-  .doc-photos .badge b{font:600 46px "Playfair Display";color:var(--gold-2);line-height:1}
+  .doc-photos .badge b{font:600 46px Montserrat;color:var(--gold-2);line-height:1}
   .doc-photos .badge span{color:#c5d6e6;font-size:14.5px;margin-top:8px}
   .qual{display:grid;gap:14px;margin:28px 0 34px}
   .qual div{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
@@ -158,7 +158,7 @@
   /* how it works */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
   .step{padding:32px 28px;border-radius:24px;background:#fff;border:1px solid var(--line);position:relative}
-  .step:before{counter-increment:s;content:"0" counter(s);font:600 46px "Playfair Display";color:var(--gold);display:block;margin-bottom:12px;line-height:1}
+  .step:before{counter-increment:s;content:"0" counter(s);font:600 46px Montserrat;color:var(--gold);display:block;margin-bottom:12px;line-height:1}
   .step h4{font-size:18px;margin-bottom:8px}
   .step p{color:var(--muted);font-size:15px}
   .pay-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:28px;color:var(--muted);font-size:14.5px}
@@ -191,7 +191,7 @@
   .upi-info small{display:block;font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-top:12px}
   .upi-info small:first-child{margin-top:0}
   .upi-info b{color:var(--navy);font-size:17px}
-  .upi-amt{font:600 30px "Playfair Display"!important}
+  .upi-amt{font:600 30px Montserrat!important}
   .upi-id{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:4px}
   .upi-id span{font-weight:700;color:var(--navy);font-size:17px;word-break:break-all}
   .upi-id button{border:1.5px solid var(--navy);background:#fff;color:var(--navy);font:700 13px Manrope;border-radius:999px;padding:7px 14px;cursor:pointer}
@@ -217,7 +217,7 @@
   details{border-bottom:1px solid var(--line);padding:24px 0}
   summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;font-weight:700;font-size:17.5px;color:var(--navy)}
   summary::-webkit-details-marker{display:none}
-  summary:after{content:"+";font:400 30px/1 "Playfair Display";color:var(--gold)}
+  summary:after{content:"+";font:400 30px/1 Montserrat;color:var(--gold)}
   details[open] summary:after{content:"–"}
   details p{margin-top:12px;color:var(--muted)}
 
@@ -275,6 +275,127 @@
     .cal-box iframe{height:980px}
     .pay-step{padding:40px 22px}
   }
+
+  /* ===== Mediclinic-style theme ===== */
+  :root{--navy:#0b3a66;--navy-2:#06284a;--navy-3:#0d4a80;--blue:#0a9ad7;--sky:#8fd3f4;--sky-2:#e3f4fc;--gold:#0a9ad7;--gold-2:#8fd3f4;--cream:#f3f8fb;--ink:#1d2b3a;--muted:#5b6b7c;--line:#e3ebf2;--r:24px;--shadow:0 20px 50px -24px rgba(11,58,102,.25)}
+  body{font-family:Manrope,system-ui,sans-serif}
+  h1,h2,h3,h4{font-family:Montserrat,system-ui,sans-serif;color:var(--navy);font-weight:500;letter-spacing:-.3px}
+  .h2{font-weight:500}
+  .eyebrow{color:var(--blue);letter-spacing:1.8px}
+  .eyebrow:before{display:none}
+  .btn{font-family:Montserrat,sans-serif;font-weight:600}
+  .btn-gold,.btn-sky{background:var(--sky);color:var(--navy)}
+  .btn-gold:hover,.btn-sky:hover{background:#74c8f0;transform:none}
+  .btn-navy{background:var(--navy)}
+  .btn-ghost{border-color:#cfe0ec}
+  /* strip + header */
+  .strip{background:#fff;color:var(--muted);border-bottom:1px solid var(--line)}
+  .strip a{color:var(--navy)}
+  header{background:#fff;border-bottom:1px solid var(--line)}
+  .nav{height:92px}
+  .logo-mark{background:var(--navy);color:#fff;font:700 20px Montserrat;border-radius:12px}
+  .logo b{font:700 17px Montserrat;color:var(--navy);letter-spacing:.2px;text-transform:uppercase}
+  .logo small{letter-spacing:.6px}
+  .menu{font-family:Montserrat;font-weight:600;gap:32px}
+  .menu a:after{background:var(--blue)}
+  .hdr-book{padding:14px 26px}
+  /* hero */
+  .mhero{padding:22px 0 0}
+  .mhero-card{position:relative;border-radius:28px;overflow:hidden;min-height:640px;display:flex;align-items:flex-end;justify-content:space-between;gap:30px;padding:56px 48px;
+    background:linear-gradient(90deg,rgba(6,40,74,.93) 0%,rgba(6,40,74,.78) 50%,rgba(6,40,74,.3) 100%),url(images/waiting-lounge.jpg) center/cover}
+  .mhero-copy{max-width:720px;color:#fff}
+  .mhero h1{color:#fff;font:800 clamp(40px,6vw,78px)/1.02 Montserrat;text-transform:uppercase;letter-spacing:-1px}
+  .mhero h1 em{font-style:normal;color:var(--blue)}
+  .mhero p{margin:22px 0 22px;font-size:18px;color:#e2eef7;max-width:560px}
+  .mhero-chips{display:flex;gap:10px;flex-wrap:wrap}
+  .mhero-chips span{border:1px solid rgba(255,255,255,.35);color:#fff;font:600 13px Montserrat;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.08)}
+  .mhero-pill{flex:none;display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(12px);border-radius:999px;padding:10px 10px 10px 12px;color:#fff;max-width:440px;transition:.25s}
+  .mhero-pill:hover{background:rgba(255,255,255,.22)}
+  .mhero-pill .av{width:56px;height:56px;border-radius:50%;flex:none;border:2px solid rgba(255,255,255,.6)}
+  .mhero-pill .tx b{display:block;font:600 16px Montserrat}
+  .mhero-pill .tx small{color:#d6e6f2;font-size:13px}
+  .mhero-pill .go{width:52px;height:52px;border-radius:50%;background:rgba(10,154,215,.85);display:grid;place-items:center;flex:none}
+  .mhero-pill .go svg{width:22px;height:22px}
+  /* I would like to */
+  .iam{padding:84px 0 40px}
+  .iam-h{font:400 clamp(28px,3.4vw,42px) Montserrat;color:var(--navy);margin-bottom:36px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .iam-h span{color:var(--blue);border-bottom:2px dotted var(--blue)}
+  .iam-h svg{width:22px;height:22px;color:var(--navy)}
+  .iam-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .iam-card{display:flex;align-items:center;gap:18px;min-height:120px;padding:26px 24px;border-radius:18px;background:linear-gradient(115deg,#eef8fd 0%,#d6effb 55%,#a9dcf3 100%);transition:.25s}
+  .iam-card:hover{transform:translateY(-3px);box-shadow:0 16px 30px -18px rgba(10,154,215,.6)}
+  .iam-card .ic{width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.7);display:grid;place-items:center;color:var(--blue);flex:none}
+  .iam-card .ic svg{width:28px;height:28px}
+  .iam-card b{font:600 17px/1.3 Montserrat;color:var(--navy)}
+  .iam-stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:44px;border-top:1px solid var(--line)}
+  .iam-stats div{padding:26px 22px 0 0}
+  .iam-stats b{display:block;font:600 24px Montserrat;color:var(--navy)}
+  .iam-stats span{color:var(--muted);font-size:14.5px}
+  /* counselling */
+  .counsel{background:var(--cream)}
+  .tag-feature{background:var(--sky);color:var(--navy)}
+  .counsel-photo .quote{background:var(--navy);font:500 16px/1.55 Montserrat;font-style:normal}
+  .counsel-photo .quote small{color:var(--sky)}
+  .concerns div{border-color:var(--line)}
+  .concerns svg{color:var(--blue)}
+  /* services */
+  .svc{border-radius:20px}
+  .svc h3{font-weight:600;font-size:21px}
+  .svc.star{background:linear-gradient(160deg,var(--navy),var(--navy-3))}
+  .svc.star h3{font-size:27px}
+  .svc.star .ic{background:rgba(143,211,244,.18);color:var(--sky)}
+  .svc.star li:before{background:var(--sky)}
+  /* doctor */
+  .doctor{background:#fff!important}
+  .doc-photos .badge b{font:700 44px Montserrat;color:var(--sky)}
+  .qual .ic{background:var(--sky-2);color:var(--blue)}
+  /* clinic: facilities list + map */
+  .clinic{background:#fff;color:var(--ink)}
+  .clinic .h2{color:var(--navy)}
+  .clinic .lead{color:var(--muted)}
+  .gallery figcaption{background:rgba(6,40,74,.75)}
+  .fac{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:56px;align-items:stretch}
+  .fac-list{display:flex;flex-direction:column;justify-content:center}
+  .fac-row{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 4px;border-bottom:1px solid #d9e3ec}
+  .fac-row small{display:block;color:var(--blue);font:600 12.5px Montserrat;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:4px}
+  .fac-row b{font:500 20px Montserrat;color:var(--navy)}
+  .fac-row i{flex:none;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:9px solid var(--navy)}
+  a.fac-row:hover b{color:var(--blue)}
+  .fac-map{border-radius:24px;overflow:hidden;min-height:420px;background:var(--sky-2)}
+  .fac-map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+  /* steps, booking, tips, faq, cta, footer */
+  .step:before{font:700 44px Montserrat;color:var(--sky)}
+  .type{box-shadow:0 10px 30px -18px rgba(11,58,102,.25)}
+  .type.active{border-color:var(--blue)}
+  .type .pill{background:var(--sky);color:var(--navy)}
+  .type .fee{color:var(--blue)}
+  .type h3{font-weight:600;font-size:21px}
+  .pay-step h3,.upi-amt{font-family:Montserrat!important;font-weight:600!important}
+  .upi-box{background:var(--cream)}
+  .tip.mind .tip-top{background:linear-gradient(140deg,#e3f4fc,#a9dcf3)}
+  .tip.mind .tip-top span{color:var(--blue)}
+  summary:after{font:400 30px/1 Montserrat;color:var(--blue)}
+  .cta{background:linear-gradient(120deg,rgba(6,40,74,.92),rgba(11,58,102,.7)),url(images/clinic-front.jpg) center/cover;border-radius:28px}
+  .cta h2{font-weight:700;text-transform:uppercase;letter-spacing:-.5px}
+  footer{background:var(--navy-2)}
+  footer .logo-mark{background:var(--blue)!important}
+  @media (max-width:1080px){
+    .iam-grid,.iam-stats{grid-template-columns:1fr 1fr}
+    .fac{grid-template-columns:1fr}
+    .mhero-card{flex-direction:column;align-items:flex-start;justify-content:flex-end;min-height:600px}
+  }
+  @media (max-width:640px){
+    .mhero{padding:12px 0 0}
+    .mhero-card{padding:30px 20px;min-height:600px;border-radius:22px;background:linear-gradient(0deg,rgba(6,40,74,.92) 0%,rgba(6,40,74,.55) 60%,rgba(6,40,74,.25) 100%),url(images/waiting-lounge.jpg) 30% center/cover}
+    .mhero-pill{max-width:none;width:100%}
+    .iam{padding:56px 0 20px}
+    .iam-grid{grid-template-columns:1fr;gap:14px}
+    .iam-card{min-height:96px}
+    .iam-stats{grid-template-columns:1fr 1fr}
+    .fac-row b{font-size:17px}
+    .nav{height:76px}
+    .logo b{font-size:15px}
+  }
 </style>
 </head>
 <body>
@@ -300,7 +421,7 @@
       <a href="#faq">FAQ</a>
       <a href="consult.html">Join video call</a>
     </nav>
-    <a href="#book" class="btn btn-navy">Book appointment</a>
+    <a href="#book" class="btn btn-sky hdr-book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>Book</a>
     <button class="burger" aria-label="Open menu" onclick="document.getElementById('menu').classList.toggle('open')">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b2e4f" stroke-width="2"><path d="M4 8h16M4 16h16"/></svg>
     </button>
@@ -309,38 +430,42 @@
 
 <main id="top">
   <!-- HERO -->
-  <section class="hero" style="padding:0">
+  <section class="mhero">
     <div class="wrap">
-      <div class="hero-copy">
-        <div class="cred"><span>Psychologist</span><span>Homoeopathic Physician</span><span>Nutrition Educator</span></div>
-        <h1>Healing for the <em>mind</em> and the body.</h1>
-        <p>Compassionate psychological counselling and homoeopathic care with Dr. Murshida K K — at our clinic in Malappuram or face to face by secure video, wherever you are.</p>
-        <div class="hero-actions">
-          <a href="#book" class="btn btn-gold" data-type="online-psychological-counselling">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z"/></svg>
-            Book counselling
-          </a>
-          <a href="#book" class="btn btn-line" data-type="online-video-consultation">Online consultation</a>
+      <div class="mhero-card">
+        <div class="mhero-copy">
+          <h1>Healing for the <em>mind</em><br>and the <em>body</em></h1>
+          <p>Compassionate psychological counselling and homoeopathic care with Dr. Murshida K K — at our clinic in Malappuram or face to face by secure video, wherever you are.</p>
+          <div class="mhero-chips"><span>Psychologist</span><span>Homoeopathic Physician</span><span>Nutrition Educator</span></div>
         </div>
-      </div>
-      <div class="hero-photo">
-        <div class="ring"></div>
-        <div class="frame"><div class="q q-tl" role="img" aria-label="Dr. Murshida K K"></div></div>
-        <div class="float f1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3"/></svg></span><div><b>Video consultations</b><small>Inside this website · no app</small></div></div>
-        <div class="float f2"><span class="ic" style="background:#f6efe2;color:#9a7535"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 5 5.6.8-4 3.9.9 5.6L12 14.6 7.1 17.3 8 11.7 4 7.8 9.6 7z"/></svg></span><div><b>BHMS · MSc Psychology</b><small>Chief Consultant</small></div></div>
+        <a href="#book" class="mhero-pill" data-type="online-psychological-counselling">
+          <span class="av q q-tl" role="img" aria-label="Dr. Murshida K K"></span>
+          <span class="tx"><b>Book a counselling session</b><small>Dr. Murshida K K · BHMS, MSc Psychology</small></span>
+          <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- TRUST -->
-  <div class="trust">
+  <!-- I WOULD LIKE TO -->
+  <section class="iam">
     <div class="wrap">
-      <div><b>Mind &amp; Body</b><span>Counselling + homoeopathy together</span></div>
-      <div><b>Online</b><span>Secure video consults, pay by UPI</span></div>
-      <div><b>195+</b><span>Health videos shared in Malayalam</span></div>
-      <div><b>Mon – Sat</b><span>Clinic: 9:30–1 &amp; 3–7</span></div>
+      <h2 class="iam-h">I would like to <span>consult the doctor</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></h2>
+      <div class="iam-grid">
+        <a class="iam-card" href="#book" data-type="online-psychological-counselling"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z"/></svg></span><b>I need counselling</b></a>
+        <a class="iam-card" href="#book" data-type="online-video-consultation"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3"/></svg></span><b>I want an online consultation</b></a>
+        <a class="iam-card" href="#clinic"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6M12 8v4M10 10h4"/></svg></span><b>I'm looking for the clinic</b></a>
+        <a class="iam-card" href="consult.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M10 8l6 4-6 4z"/></svg></span><b>I have a booked video call</b></a>
+      </div>
+      <div class="iam-stats">
+        <div><b>Mind &amp; Body</b><span>Counselling + homoeopathy together</span></div>
+        <div><b>Online</b><span>Secure video consults, pay by UPI</span></div>
+        <div><b>195+</b><span>Health videos shared in Malayalam</span></div>
+        <div><b>Mon – Sat</b><span>Clinic: 9:30–1 &amp; 3–7</span></div>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- COUNSELLING FEATURE -->
   <section class="counsel" id="counselling">
@@ -420,7 +545,7 @@
   <section class="clinic" id="clinic">
     <div class="wrap">
       <div class="sec-top">
-        <div><span class="eyebrow">Our clinic</span><h2 class="h2" style="margin-bottom:0">Homoeo Home Speciality Clinic</h2></div>
+        <div><span class="eyebrow">Our clinic</span><h2 class="h2" style="margin-bottom:0">Visit Homoeo Home Speciality Clinic</h2></div>
         <p class="lead">A calm, modern clinic designed to make every visit comfortable — from a welcoming lounge to a private consulting room.</p>
       </div>
       <div class="gallery">
@@ -431,10 +556,14 @@
         <figure class="g5"><img src="images/clinic-opening.jpg" alt="Clinic opening day" loading="lazy"><figcaption>Opening day</figcaption></figure>
         <figure class="g5"><img src="images/clinic-exterior-low.jpg" alt="Clinic entrance" loading="lazy"></figure>
       </div>
-      <div class="clinic-info">
-        <div><small>Location</small><b>Near Juma Masjid, Mannampara, Irumbuzhi, Malappuram</b><br><a href="https://www.google.com/maps/search/?api=1&query=Homoeo+Home+Speciality+Clinic+Irumbuzhi+Malappuram" target="_blank" rel="noopener">Get directions →</a></div>
-        <div><small>Clinic hours</small><b>Monday – Saturday</b><br>Morning 9:30 am – 1 pm<br>Evening 3 pm – 7 pm</div>
-        <div><small>Booking &amp; WhatsApp</small><b><a href="tel:+917902558507">+91 79025 58507</a></b><br><a href="https://wa.me/917902558507" target="_blank" rel="noopener">Chat on WhatsApp →</a></div>
+      <div class="fac">
+        <div class="fac-list">
+          <a class="fac-row" href="https://www.google.com/maps/search/?api=1&query=Homoeo+Home+Speciality+Clinic+Irumbuzhi+Malappuram" target="_blank" rel="noopener"><span><small>Location</small><b>Near Juma Masjid, Mannampara, Irumbuzhi, Malappuram</b></span><i></i></a>
+          <div class="fac-row"><span><small>Clinic hours</small><b>Monday – Saturday · 9:30 am – 1 pm &amp; 3 pm – 7 pm</b></span><i></i></div>
+          <a class="fac-row" href="tel:+917902558507"><span><small>Booking &amp; WhatsApp</small><b>+91 79025 58507</b></span><i></i></a>
+          <a class="fac-row" href="https://wa.me/917902558507" target="_blank" rel="noopener"><span><small>Chat with us</small><b>WhatsApp the clinic</b></span><i></i></a>
+        </div>
+        <div class="fac-map"><iframe title="Clinic location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Irumbuzhi%2C%20Malappuram%2C%20Kerala&z=14&output=embed"></iframe></div>
       </div>
     </div>
   </section>
