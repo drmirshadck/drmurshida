@@ -399,6 +399,59 @@
   .credit{margin-top:18px;text-align:center;font-size:13px;color:#8ea6be}
   .credit a{color:#fff;font-weight:600}
   .credit a:hover{color:var(--sky)}
+  /* booking panel states */
+  .book-panel{scroll-margin-top:110px}
+  .cal-box{display:none}
+  .book-empty{padding:64px 24px;text-align:center}
+  .book-empty .be-ic{width:60px;height:60px;border-radius:18px;background:var(--sky-2);color:var(--blue);display:inline-grid;place-items:center;margin-bottom:16px}
+  .book-empty h3{font:600 24px Montserrat;margin-bottom:8px}
+  .book-empty p{color:var(--muted);max-width:440px;margin:0 auto}
+  .book-sum{display:none;align-items:center;gap:14px;padding:18px 24px;background:#eaf7ef;border-bottom:1px solid #cfe9d8}
+  .book-sum.show{display:flex}
+  .book-sum .bs-ic{width:34px;height:34px;border-radius:50%;background:#1e8e3e;color:#fff;display:grid;place-items:center;flex:none}
+  .book-sum .bs-tx{flex:1;color:var(--navy);font-size:15px;line-height:1.45}
+  .book-sum .bs-tx small{color:var(--muted);font-size:13.5px}
+  .bs-link{border:1.5px solid var(--navy);background:#fff;color:var(--navy);font:600 13px Montserrat;border-radius:999px;padding:8px 16px;cursor:pointer;flex:none}
+  /* payment popup */
+  body.modal-open{overflow:hidden}
+  .pay-modal{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px}
+  .pay-modal[hidden]{display:none}
+  .pm-backdrop{position:absolute;inset:0;background:rgba(4,24,44,.62);backdrop-filter:blur(3px);opacity:0;transition:opacity .2s}
+  .pm-card{position:relative;width:100%;max-width:640px;max-height:calc(100vh - 32px);overflow:auto;background:#fff;border-radius:26px;box-shadow:0 40px 90px -30px rgba(0,0,0,.55);transform:translateY(16px) scale(.98);opacity:0;transition:transform .2s,opacity .2s}
+  .pay-modal.open .pm-backdrop{opacity:1}
+  .pay-modal.open .pm-card{transform:none;opacity:1}
+  .pm-x{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.16);color:#fff;font-size:26px;line-height:1;cursor:pointer;z-index:2}
+  .pm-x:hover{background:rgba(255,255,255,.28)}
+  .pm-head{background:linear-gradient(135deg,var(--navy-2),var(--navy) 60%,#0e6aa5);color:#d6e8f5;padding:28px 30px 24px}
+  .pm-step{display:inline-block;font:600 12px Montserrat;letter-spacing:1.4px;text-transform:uppercase;color:var(--sky);margin-bottom:8px}
+  .pm-head h3{color:#fff;font:700 24px Montserrat;margin-bottom:4px;padding-right:40px}
+  .pm-meta{font-size:15px}
+  .pm-price{margin-top:16px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .pm-price span{font:800 40px/1 Montserrat;color:#fff}
+  .pm-price small{font-size:13px;color:var(--sky)}
+  .pm-body{display:grid;grid-template-columns:auto 1fr;gap:26px;padding:26px 30px 8px;align-items:start}
+  .pm-body .upi-qr{background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px;box-shadow:none}
+  .pm-body .upi-qr img,.pm-body .upi-qr canvas{width:200px;height:200px}
+  .pm-info small{display:block;font:600 11.5px Montserrat;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted);margin-top:12px}
+  .pm-info small:first-child{margin-top:0}
+  .pm-info b{color:var(--navy);font-size:17px}
+  .pm-info .upi-id button{padding:5px 14px}
+  .pm-info ol{margin:16px 0 0 18px;color:var(--muted);font-size:14px;display:grid;gap:6px}
+  .pm-app{display:none;margin-top:14px;text-align:center;border-radius:999px;padding:12px;background:var(--sky-2);color:var(--navy);font:600 15px Montserrat}
+  .pm-foot{padding:20px 30px 28px}
+  .pm-foot .btn{width:100%;justify-content:center;background:var(--navy);color:#fff}
+  .pm-foot .btn:hover{background:var(--navy-2)}
+  .pm-info ol b{font-size:inherit}
+  @media (pointer:coarse){.pm-app{display:block}}
+  @media (max-width:600px){
+    .pay-modal{padding:0;align-items:flex-end}
+    .pm-card{border-radius:24px 24px 0 0;max-height:94vh}
+    .pm-head{padding:24px 22px 20px}
+    .pm-body{grid-template-columns:1fr;justify-items:center;padding:22px 22px 4px;gap:18px}
+    .pm-info{width:100%}
+    .pm-foot{padding:18px 22px 24px}
+    .book-sum{flex-wrap:wrap}
+  }
 </style>
 </head>
 <body>
@@ -596,7 +649,7 @@
         <p class="lead">Select the type of appointment, then pick a date and time.</p>
       </div>
       <div class="types">
-        <button class="type active" data-type="online-psychological-counselling">
+        <button class="type" data-type="online-psychological-counselling">
           <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z"/></svg></span><span class="pill">Featured</span></div>
           <h3>Psychological Counselling</h3><p>Private one-to-one session by video.</p><div class="dur">45 minutes · Online · <span class="fee">₹1,000</span></div>
         </button>
@@ -610,25 +663,15 @@
         </button>
       </div>
       <div class="book-panel">
-        <div class="pay-step" id="payStep">
-          <span class="eyebrow" style="justify-content:center">Step 1 of 2 · Pay by UPI</span>
-          <h3>Pay <span id="payAmt">₹0</span> by any UPI app</h3>
-          <p>Scan the QR code with Google Pay, PhonePe, Paytm or any UPI app. On your phone, tap <b>Copy UPI ID</b> and paste it in your UPI app.</p>
-          <div class="upi-box">
-            <div class="upi-qr" id="upiQr"></div>
-            <div class="upi-info">
-              <small>Pay to</small><b id="upiName"></b>
-              <small>UPI ID</small>
-              <div class="upi-id"><span id="upiId"></span><button type="button" id="copyUpi">Copy UPI ID</button></div>
-              <small>Amount</small><b id="upiAmt2" class="upi-amt"></b>
-              <ol>
-                <li>Pay the exact amount and note the <b>UPI transaction ID / UTR</b> (12 digits) shown after payment.</li>
-                <li>Tap the button below, choose your time and enter the UTR.</li>
-                <li>We verify the payment and confirm your booking — the video link is sent by email and WhatsApp.</li>
-              </ol>
-              <button type="button" class="btn btn-gold" id="paidBtn">I've paid — choose my time</button>
-            </div>
-          </div>
+        <div class="book-empty" id="bookEmpty">
+          <span class="be-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span>
+          <h3>Select a consultation above</h3>
+          <p>You'll see the fee and payment details, then choose your date and time.</p>
+        </div>
+        <div class="book-sum" id="bookSum">
+          <span class="bs-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <span class="bs-tx"><b id="bsTitle"></b> · <span id="bsFee"></span><br><small>Step 2 of 2: choose your time and enter your <b>UTR number</b> in the form.</small></span>
+          <button type="button" class="bs-link" id="bsPay">Payment details</button>
         </div>
         <div class="cal-box" id="calBox">
           <iframe id="calFrame" title="Booking calendar" src="about:blank" loading="lazy"></iframe>
@@ -712,6 +755,37 @@
 </a>
 
 <script src="qrcode.min.js"></script>
+<!-- PAYMENT POPUP -->
+<div class="pay-modal" id="payModal" role="dialog" aria-modal="true" aria-labelledby="pmTitle" hidden>
+  <div class="pm-backdrop" data-close></div>
+  <div class="pm-card">
+    <button type="button" class="pm-x" data-close aria-label="Close">&times;</button>
+    <div class="pm-head">
+      <span class="pm-step">Step 1 of 2 · Pay by UPI</span>
+      <h3 id="pmTitle"></h3>
+      <div class="pm-meta" id="pmMeta"></div>
+      <div class="pm-price"><span id="pmPrice"></span><small id="pmNote"></small></div>
+    </div>
+    <div class="pm-body">
+      <div class="upi-qr" id="upiQr"></div>
+      <div class="pm-info">
+        <small>Pay to</small><b id="upiName"></b>
+        <small>UPI ID</small>
+        <div class="upi-id"><span id="upiId"></span><button type="button" id="copyUpi">Copy</button></div>
+        <a class="pm-app" id="upiApp" href="#">Pay with UPI app</a>
+        <ol>
+          <li>Scan the QR (or copy the UPI ID) and pay the <b>exact amount</b> with GPay, PhonePe, Paytm or any UPI app.</li>
+          <li>Note the <b>12-digit UTR / transaction ID</b> shown after payment.</li>
+          <li>Choose your time and enter the UTR. We verify it and send your video link by email &amp; WhatsApp.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="pm-foot">
+      <button type="button" class="btn btn-gold" id="paidBtn">I've paid — choose my time</button>
+    </div>
+  </div>
+</div>
+
 <script>
   /* ---------- PAYMENT SETTINGS (UPI) ----------
      UPI_ID:   the doctor's UPI ID (merchant UPI ID recommended)
@@ -728,40 +802,76 @@
   const CAL = 'https://cal.com/dr-mohammed-mirshad-7n1ksu/';
   const LABEL = {'online-psychological-counselling':'Counselling session','online-video-consultation':'Online consultation','in-clinic-visit':'Clinic visit'};
   document.getElementById('yr').textContent = new Date().getFullYear();
-  const frame = document.getElementById('calFrame'), calBox = document.getElementById('calBox');
-  const payStep = document.getElementById('payStep');
+  const DETAILS = {
+    'online-psychological-counselling': {title:'Psychological Counselling', meta:'45 minutes · Private video session', note:''},
+    'online-video-consultation': {title:'Online Consultation', meta:'20 minutes · Homoeopathy & nutrition by video', note:'Consultation fee only — medicines charged separately'}
+  };
+  const $ = id => document.getElementById(id);
+  const frame = $('calFrame'), calBox = $('calBox'), modal = $('payModal');
+  const rupees = n => '₹' + n.toLocaleString('en-IN');
   let current = null;
+
   function showCal(type){
-    payStep.classList.remove('show'); calBox.style.display = 'block';
+    $('bookEmpty').style.display = 'none';
+    calBox.style.display = 'block';
     frame.src = CAL + type + '?embed=true&theme=light';
+  }
+  function openPay(type){
+    const fee = FEES[type], d = DETAILS[type] || {title: LABEL[type], meta: '', note: ''};
+    const upi = 'upi://pay?pa=' + encodeURIComponent(UPI_ID) + '&pn=' + encodeURIComponent(UPI_NAME) + '&am=' + fee.toFixed(2) + '&cu=INR&tn=' + encodeURIComponent(LABEL[type]);
+    $('pmTitle').textContent = d.title;
+    $('pmMeta').textContent = d.meta;
+    $('pmPrice').textContent = rupees(fee);
+    $('pmNote').textContent = d.note;
+    $('upiName').textContent = UPI_NAME;
+    $('upiId').textContent = UPI_ID;
+    $('upiApp').href = upi;
+    const box = $('upiQr'); box.innerHTML = '';
+    if (window.QRCode) new QRCode(box, {text: upi, width: 200, height: 200, correctLevel: QRCode.CorrectLevel.M});
+    modal.hidden = false;
+    document.body.classList.add('modal-open');
+    setTimeout(() => modal.classList.add('open'), 10);
+    $('paidBtn').focus({preventScroll: true});
+  }
+  function closePay(){
+    modal.classList.remove('open');
+    document.body.classList.remove('modal-open');
+    setTimeout(() => { modal.hidden = true; }, 200);
   }
   function selectType(type){
     current = type;
     document.querySelectorAll('.type').forEach(t => t.classList.toggle('active', t.dataset.type === type));
     const fee = FEES[type];
     if (UPI_ID && fee > 0) {
-      const upi = 'upi://pay?pa=' + encodeURIComponent(UPI_ID) + '&pn=' + encodeURIComponent(UPI_NAME) + '&am=' + fee.toFixed(2) + '&cu=INR&tn=' + encodeURIComponent(LABEL[type]);
-      document.getElementById('payAmt').textContent = '₹' + fee.toLocaleString('en-IN');
-      document.getElementById('upiAmt2').textContent = '₹' + fee.toLocaleString('en-IN');
-      document.getElementById('upiName').textContent = UPI_NAME;
-      document.getElementById('upiId').textContent = UPI_ID;
-      const box = document.getElementById('upiQr'); box.innerHTML = '';
-      if (window.QRCode) new QRCode(box, {text: upi, width: 220, height: 220, correctLevel: QRCode.CorrectLevel.M});
-      payStep.classList.add('show'); calBox.style.display = 'none'; frame.src = 'about:blank';
+      // Paid online session: hide the calendar until the patient confirms payment in the popup
+      $('bookSum').classList.remove('show');
+      calBox.style.display = 'none'; frame.src = 'about:blank';
+      $('bookEmpty').style.display = 'block';
+      openPay(type);
     } else {
+      $('bookSum').classList.remove('show');
       showCal(type);
     }
   }
-  document.getElementById('paidBtn').addEventListener('click', () => { showCal(current); document.getElementById('book').scrollIntoView({behavior:'smooth'}); });
-  document.getElementById('copyUpi').addEventListener('click', e => {
+  $('paidBtn').addEventListener('click', () => {
+    closePay();
+    $('bsTitle').textContent = (DETAILS[current] || {}).title || LABEL[current];
+    $('bsFee').textContent = rupees(FEES[current]) + ' paid by UPI';
+    $('bookSum').classList.add('show');
+    showCal(current);
+    setTimeout(() => $('book').querySelector('.book-panel').scrollIntoView({behavior:'smooth', block:'start'}), 220);
+  });
+  $('bsPay').addEventListener('click', () => openPay(current));
+  modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closePay));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) closePay(); });
+  $('copyUpi').addEventListener('click', e => {
     const b = e.currentTarget;
-    const done = () => { b.textContent = 'Copied ✓'; setTimeout(() => b.textContent = 'Copy UPI ID', 2000); };
+    const done = () => { b.textContent = 'Copied ✓'; setTimeout(() => b.textContent = 'Copy', 2000); };
     if (navigator.clipboard) navigator.clipboard.writeText(UPI_ID).then(done, () => prompt('Copy this UPI ID:', UPI_ID)); else prompt('Copy this UPI ID:', UPI_ID);
   });
   document.querySelectorAll('.type').forEach(t => t.addEventListener('click', () => selectType(t.dataset.type)));
   document.querySelectorAll('a[data-type]').forEach(a => a.addEventListener('click', () => selectType(a.dataset.type)));
-  document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => document.getElementById('menu').classList.remove('open')));
-  selectType('online-psychological-counselling');
+  document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => $('menu').classList.remove('open')));
 </script>
 </body>
 </html>
