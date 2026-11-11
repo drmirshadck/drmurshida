@@ -3,461 +3,579 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dr. Murshida K K | Homoeo Home Speciality Clinic</title>
-<meta name="description" content="Homoeopathy, psychological counselling and nutrition guidance with Dr. Murshida K K. Book an in-clinic visit or a 30-minute online video consultation.">
+<title>Dr. Murshida K K | Homoeopathy &amp; Psychological Counselling</title>
+<meta name="description" content="Dr. Murshida K K (BHMS, MSc Psychology) — psychological counselling, homoeopathy and nutrition guidance at Homoeo Home Speciality Clinic, Irumbuzhi, Malappuram. Book online video consultations.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b2e4f'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-size='28' fill='%23d9b779' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#0b3a66; --navy-2:#062a4c; --blue:#0a9ad7; --sky:#8fd3f4; --sky-2:#d9f1fc;
-    --ink:#1d2b3a; --muted:#5b6b7c; --line:#e3ebf2; --bg:#ffffff; --soft:#f4f9fc;
-    --radius:24px;
+    --navy:#0b2e4f; --navy-2:#071f37; --navy-3:#123f69; --blue:#1a8fd0; --sky:#9fd8f5; --sky-2:#e6f4fc;
+    --gold:#c9a463; --gold-2:#e8d3a8; --cream:#faf7f2; --ink:#1b2a3a; --muted:#5d6b7b; --line:#e5ebf1;
+    --r:28px; --shadow:0 24px 60px -24px rgba(11,46,79,.28);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,h4{font-family:Montserrat,sans-serif;color:var(--navy);line-height:1.15}
+  body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Playfair Display",Georgia,serif;color:var(--navy);line-height:1.12;font-weight:600}
+  h4{font-weight:700;color:var(--navy)}
   a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
-  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
-
-  /* Header */
-  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
-  .logo{display:flex;align-items:center;gap:12px}
-  .logo-mark{width:42px;height:42px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-items:center;font:700 16px Montserrat}
-  .logo-text b{display:block;font:700 17px Montserrat;color:var(--navy);letter-spacing:.3px}
-  .logo-text span{font-size:12px;color:var(--muted)}
-  .menu{display:flex;gap:28px;font:600 15px Montserrat;color:var(--navy)}
-  .menu a:hover{color:var(--blue)}
-  .btn{display:inline-flex;align-items:center;gap:10px;border:0;cursor:pointer;font:600 15px Montserrat;border-radius:999px;padding:14px 26px;transition:.2s}
-  .btn-sky{background:var(--sky);color:var(--navy)}
-  .btn-sky:hover{background:#74c8f0}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--gold)}
+  .eyebrow:before{content:"";width:28px;height:1.5px;background:currentColor}
+  .h2{font-size:clamp(32px,4vw,52px);margin:14px 0 18px}
+  .lead{font-size:17.5px;color:var(--muted)}
+  section{padding:110px 0}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;cursor:pointer;font:700 15px Manrope;border-radius:999px;padding:16px 28px;transition:.25s;white-space:nowrap}
+  .btn svg{width:18px;height:18px}
+  .btn-gold{background:var(--gold);color:var(--navy-2)}
+  .btn-gold:hover{background:#d8b678;transform:translateY(-1px)}
   .btn-navy{background:var(--navy);color:#fff}
   .btn-navy:hover{background:var(--navy-2)}
-  .btn-ghost{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.45)}
-  .btn-ghost:hover{background:rgba(255,255,255,.28)}
-  .btn svg{width:18px;height:18px}
-  .burger{display:none;background:none;border:1px solid var(--line);width:46px;height:46px;border-radius:50%;cursor:pointer}
+  .btn-line{border:1.5px solid rgba(255,255,255,.5);color:#fff;background:transparent}
+  .btn-line:hover{background:rgba(255,255,255,.12)}
+  .btn-ghost{border:1.5px solid var(--line);color:var(--navy);background:#fff}
+  .btn-ghost:hover{border-color:var(--navy)}
+  /* photo crops from the 2x2 portrait grid */
+  .q{background:url(images/dr-murshida-grid.jpg) no-repeat;background-size:206% 206%}
+  .q-tl{background-position:0 0}.q-tr{background-position:100% 0}.q-bl{background-position:0 100%}.q-br{background-position:100% 100%}
 
-  /* Hero */
-  .hero{padding:24px 0 0}
-  .hero-card{position:relative;border-radius:var(--radius);overflow:hidden;min-height:600px;background:linear-gradient(120deg,var(--navy-2) 0%,var(--navy) 45%,#0e6aa5 100%);display:grid;grid-template-columns:1.15fr .85fr;align-items:end}
-  .hero-copy{padding:72px 56px;color:#fff;align-self:center}
-  .eyebrow{display:inline-block;font:600 13px Montserrat;letter-spacing:1.5px;text-transform:uppercase;color:var(--sky);margin-bottom:18px}
-  .hero h1{color:#fff;font-size:clamp(38px,5.4vw,66px);font-weight:800;text-transform:uppercase;letter-spacing:-.5px}
-  .hero h1 em{font-style:normal;color:var(--sky)}
-  .hero p{margin:22px 0 32px;max-width:520px;font-size:18px;color:#dcecf7}
+  /* top strip + header */
+  .strip{background:var(--navy-2);color:#b9cbe0;font-size:13.5px}
+  .strip .wrap{display:flex;justify-content:space-between;gap:18px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+  .strip a{color:#fff;font-weight:600}
+  .strip span{display:inline-flex;align-items:center;gap:8px}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px}
+  .logo{display:flex;align-items:center;gap:14px}
+  .logo-mark{width:46px;height:46px;border-radius:14px;background:var(--navy);color:var(--gold-2);display:grid;place-items:center;font:600 22px "Playfair Display"}
+  .logo b{display:block;font:600 19px "Playfair Display";color:var(--navy)}
+  .logo small{display:block;font-size:12px;color:var(--muted);letter-spacing:.3px}
+  .menu{display:flex;gap:30px;font-weight:600;font-size:15px;color:var(--navy)}
+  .menu a{position:relative}
+  .menu a:after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gold);transition:.25s}
+  .menu a:hover:after{width:100%}
+  .burger{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer}
+
+  /* hero */
+  .hero{background:radial-gradient(1200px 600px at 85% -10%,#1d5a8f 0%,transparent 60%),linear-gradient(135deg,var(--navy-2),var(--navy) 55%,var(--navy-3));color:#fff;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;inset:auto 0 0 0;height:120px;background:linear-gradient(transparent,rgba(7,31,55,.35))}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;min-height:660px;position:relative;z-index:1}
+  .hero-copy{padding:80px 0}
+  .cred{display:inline-flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+  .cred span{border:1px solid rgba(217,183,121,.5);color:var(--gold-2);font-size:13px;font-weight:600;padding:7px 14px;border-radius:999px;background:rgba(201,164,99,.08)}
+  .hero h1{color:#fff;font-size:clamp(42px,5.6vw,74px);font-weight:600;letter-spacing:-.5px}
+  .hero h1 em{font-style:italic;color:var(--gold-2);font-weight:500}
+  .hero p{margin:24px 0 36px;max-width:540px;font-size:18.5px;color:#cfdeec}
   .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
-  .hero-photo{position:relative;height:100%;min-height:600px}
-  .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
-  .hero-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy) 0%,rgba(11,58,102,0) 35%);z-index:1}
-  .badge{position:absolute;z-index:2;left:24px;bottom:24px;right:24px;background:rgba(255,255,255,.95);border-radius:18px;padding:16px 20px;display:flex;align-items:center;gap:14px}
-  .badge .dot{width:12px;height:12px;border-radius:50%;background:#2ecc71;box-shadow:0 0 0 6px rgba(46,204,113,.18)}
-  .badge b{font:700 16px Montserrat;color:var(--navy);display:block}
-  .badge span{font-size:13px;color:var(--muted)}
+  .hero-photo{position:relative;align-self:end;height:620px}
+  .hero-photo .frame{position:absolute;right:0;bottom:0;width:88%;height:94%;border-radius:220px 220px 0 0;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.6);border:6px solid rgba(255,255,255,.08)}
+  .hero-photo .frame div{width:100%;height:100%}
+  .hero-photo .ring{position:absolute;right:-60px;top:20px;width:340px;height:340px;border-radius:50%;border:1px solid rgba(217,183,121,.35)}
+  .float{position:absolute;background:#fff;color:var(--ink);border-radius:20px;padding:16px 20px;box-shadow:var(--shadow);display:flex;align-items:center;gap:14px;z-index:2}
+  .float b{display:block;color:var(--navy);font-size:15px}
+  .float small{color:var(--muted);font-size:13px}
+  .float .ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--sky-2);color:var(--blue)}
+  .float .ic svg{width:22px;height:22px}
+  .f1{left:-10px;bottom:120px}.f2{right:10px;bottom:30px}
 
-  /* Quick actions */
-  section{padding:96px 0}
-  .q-head{font-family:Montserrat;font-size:clamp(28px,3.4vw,40px);font-weight:500;color:var(--navy);margin-bottom:36px}
-  .q-head em{font-style:normal;color:var(--blue);border-bottom:2px dotted var(--blue)}
-  .quick{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-  .qcard{display:flex;align-items:center;gap:18px;padding:28px 24px;border-radius:20px;background:linear-gradient(135deg,#eef8fd 0%,var(--sky-2) 55%,#b8e4f8 100%);min-height:120px;transition:.25s}
-  .qcard:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(10,154,215,.18)}
-  .qicon{flex:none;width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.75);display:grid;place-items:center;color:var(--blue)}
-  .qicon svg{width:28px;height:28px}
-  .qcard b{font:600 17px Montserrat;color:var(--navy);line-height:1.3}
+  /* trust bar */
+  .trust{background:#fff;border-bottom:1px solid var(--line)}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .trust div{padding:34px 24px;border-right:1px solid var(--line)}
+  .trust div:last-child{border-right:0}
+  .trust b{display:block;font:600 30px "Playfair Display";color:var(--navy)}
+  .trust span{color:var(--muted);font-size:14.5px}
 
-  /* About */
-  .about{background:var(--soft)}
-  .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-  .about-img{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;background:var(--sky-2)}
-  .about-img img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
-  .h2{font-size:clamp(32px,4vw,52px);font-weight:600;margin-bottom:20px}
-  .lead{font-size:18px;color:var(--muted);margin-bottom:16px}
-  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
-  .stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}
-  .stat b{display:block;font:700 26px Montserrat;color:var(--blue)}
-  .stat span{font-size:14px;color:var(--muted)}
+  /* counselling feature */
+  .counsel{background:var(--cream);position:relative}
+  .counsel .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:center}
+  .counsel-photo{position:relative}
+  .counsel-photo .main{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow)}
+  .counsel-photo .main div{width:100%;height:100%}
+  .counsel-photo .quote{position:absolute;right:-36px;bottom:40px;max-width:270px;background:var(--navy);color:#e3edf6;padding:24px 26px;border-radius:22px;box-shadow:var(--shadow);font:italic 500 17px/1.5 "Playfair Display"}
+  .counsel-photo .quote small{display:block;margin-top:10px;font:600 12.5px Manrope;color:var(--gold-2);font-style:normal;letter-spacing:1px;text-transform:uppercase}
+  .tag-feature{display:inline-block;background:var(--navy);color:var(--gold-2);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:7px 14px;border-radius:999px;margin-bottom:16px}
+  .concerns{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:30px 0 34px}
+  .concerns div{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid #efe6d6;border-radius:16px;padding:15px 16px;font-weight:600;color:var(--navy);font-size:15px}
+  .concerns svg{flex:none;width:22px;height:22px;color:var(--gold)}
+  .counsel-meta{display:flex;gap:28px;flex-wrap:wrap;margin-bottom:30px;color:var(--muted);font-size:14.5px}
+  .counsel-meta b{color:var(--navy)}
 
-  /* Services */
-  .sec-top{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
-  .sec-top p{max-width:460px;color:var(--muted)}
-  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .svc{border:1px solid var(--line);border-radius:20px;padding:32px 28px;transition:.25s;background:#fff}
-  .svc:hover{border-color:var(--sky);box-shadow:0 18px 40px rgba(11,58,102,.08)}
-  .svc .qicon{background:var(--sky-2);margin-bottom:22px}
-  .svc h3{font-size:20px;margin-bottom:10px}
-  .svc p{color:var(--muted);font-size:15px}
+  /* services */
+  .sec-top{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:52px}
+  .sec-top p{max-width:470px}
+  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:24px;padding:34px 30px;transition:.3s;position:relative;overflow:hidden}
+  .svc:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+  .svc .ic{width:58px;height:58px;border-radius:18px;background:var(--sky-2);color:var(--blue);display:grid;place-items:center;margin-bottom:22px}
+  .svc .ic svg{width:28px;height:28px}
+  .svc h3{font-size:23px;margin-bottom:10px}
+  .svc p{color:var(--muted);font-size:15.5px}
+  .svc.star{grid-row:span 2;background:linear-gradient(160deg,var(--navy),var(--navy-3));color:#d6e3ef;border:0;display:flex;flex-direction:column}
+  .svc.star h3{color:#fff;font-size:30px}
+  .svc.star .ic{background:rgba(201,164,99,.16);color:var(--gold-2)}
+  .svc.star p{color:#c8d8e8}
+  .svc.star ul{list-style:none;margin:20px 0 28px;display:grid;gap:9px}
+  .svc.star li{padding-left:26px;position:relative;font-size:15px}
+  .svc.star li:before{content:"";position:absolute;left:0;top:9px;width:12px;height:2px;background:var(--gold)}
+  .svc.star .btn{margin-top:auto;align-self:flex-start}
 
-  /* Consult types */
-  .consult{background:linear-gradient(180deg,#fff 0%,var(--soft) 100%)}
-  .plans{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-  .plan{border-radius:var(--radius);padding:44px 40px;position:relative;overflow:hidden}
-  .plan.video{background:var(--navy);color:#dcecf7}
-  .plan.video h3{color:#fff}
-  .plan.clinic{background:#fff;border:1px solid var(--line)}
-  .plan .tag{display:inline-block;font:600 12px Montserrat;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:18px}
-  .plan.video .tag{background:var(--sky);color:var(--navy)}
-  .plan.clinic .tag{background:var(--sky-2);color:var(--navy)}
-  .plan h3{font-size:30px;margin-bottom:8px}
-  .plan .dur{font:600 16px Montserrat;margin-bottom:22px;opacity:.85}
-  .plan ul{list-style:none;margin-bottom:30px}
-  .plan li{padding:9px 0 9px 30px;position:relative;border-bottom:1px solid rgba(143,211,244,.18)}
-  .plan.clinic li{border-color:var(--line);color:var(--muted)}
-  .plan li:before{content:"";position:absolute;left:0;top:15px;width:16px;height:16px;border-radius:50%;background:var(--blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/10px no-repeat}
+  /* doctor */
+  .doctor .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+  .doc-photos{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;height:620px}
+  .doc-photos > div{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+  .doc-photos .tall{grid-row:span 2}
+  .doc-photos .tall div,.doc-photos .s div{width:100%;height:100%}
+  .doc-photos .badge{background:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:26px;box-shadow:none}
+  .doc-photos .badge b{font:600 46px "Playfair Display";color:var(--gold-2);line-height:1}
+  .doc-photos .badge span{color:#c5d6e6;font-size:14.5px;margin-top:8px}
+  .qual{display:grid;gap:14px;margin:28px 0 34px}
+  .qual div{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+  .qual .ic{width:46px;height:46px;border-radius:14px;background:var(--cream);color:var(--gold);display:grid;place-items:center;flex:none}
+  .qual .ic svg{width:22px;height:22px}
+  .qual b{display:block;color:var(--navy)}
+  .qual small{color:var(--muted);font-size:14px}
 
-  /* Steps */
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
-  .step{padding:30px 26px;border-radius:20px;background:var(--soft);position:relative}
-  .step:before{counter-increment:s;content:"0" counter(s);font:800 44px Montserrat;color:var(--sky);display:block;margin-bottom:10px}
+  /* clinic gallery */
+  .clinic{background:var(--navy-2);color:#cfdcea}
+  .clinic .h2{color:#fff}
+  .clinic .lead{color:#a9bdd2}
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:16px}
+  .gallery figure{position:relative;border-radius:22px;overflow:hidden}
+  .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+  .gallery figure:hover img{transform:scale(1.05)}
+  .gallery figcaption{position:absolute;left:16px;bottom:16px;background:rgba(7,31,55,.75);backdrop-filter:blur(6px);color:#fff;font-size:13.5px;font-weight:600;padding:8px 14px;border-radius:999px}
+  .g1{grid-column:span 2;grid-row:span 2}.g2{grid-column:span 2}.g5{grid-column:span 2}
+  .clinic-info{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+  .clinic-info div{border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:24px 26px}
+  .clinic-info small{display:block;color:var(--gold-2);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;font-size:12px;margin-bottom:8px}
+  .clinic-info b{color:#fff;font-weight:600}
+  .clinic-info a{color:var(--sky);font-weight:600}
+
+  /* how it works */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
+  .step{padding:32px 28px;border-radius:24px;background:#fff;border:1px solid var(--line);position:relative}
+  .step:before{counter-increment:s;content:"0" counter(s);font:600 46px "Playfair Display";color:var(--gold);display:block;margin-bottom:12px;line-height:1}
   .step h4{font-size:18px;margin-bottom:8px}
-  .step p{font-size:15px;color:var(--muted)}
+  .step p{color:var(--muted);font-size:15px}
+  .pay-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:28px;color:var(--muted);font-size:14.5px}
+  .pay-row span{border:1px solid var(--line);border-radius:10px;padding:7px 12px;font-weight:700;color:var(--navy);font-size:13px;background:#fff}
 
-  /* Booking */
-  .booking{background:var(--navy);color:#fff;border-radius:var(--radius);padding:64px 48px;margin:0 24px}
-  .booking .h2{color:#fff}
-  .booking .lead{color:#cfe3f1}
-  .tabs{display:flex;gap:10px;margin:28px 0 24px;flex-wrap:wrap}
-  .tab{border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;font:600 15px Montserrat;padding:12px 22px;border-radius:999px;cursor:pointer}
-  .tab.active{background:var(--sky);color:var(--navy);border-color:var(--sky)}
-  .cal-box{background:#fff;border-radius:20px;min-height:680px;overflow:hidden}
-  .cal-box iframe{width:100%;height:720px;border:0;display:block}
-  .call-note{margin-top:18px;color:#cfe3f1;font-size:15px}
-  .call-note a{color:var(--sky);font-weight:600}
+  /* booking */
+  .book{background:var(--cream)}
+  .types{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:28px}
+  .type{background:#fff;border:2px solid transparent;border-radius:24px;padding:28px;cursor:pointer;transition:.25s;text-align:left;font:inherit;color:inherit;box-shadow:0 10px 30px -18px rgba(11,46,79,.25)}
+  .type:hover{transform:translateY(-3px)}
+  .type.active{border-color:var(--gold)}
+  .type .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+  .type .ic{width:50px;height:50px;border-radius:16px;background:var(--sky-2);color:var(--blue);display:grid;place-items:center}
+  .type .ic svg{width:24px;height:24px}
+  .type .pill{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);background:var(--gold-2);padding:5px 10px;border-radius:999px}
+  .type h3{font-size:23px;margin-bottom:6px}
+  .type p{color:var(--muted);font-size:14.5px}
+  .type .dur{margin-top:14px;font-weight:700;color:var(--navy);font-size:14px}
+  .book-panel{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+  .pay-step{display:none;padding:56px 40px;text-align:center}
+  .pay-step.show{display:block}
+  .pay-step h3{font-size:30px;margin-bottom:10px}
+  .pay-step p{color:var(--muted);max-width:560px;margin:0 auto 26px}
+  .cal-box iframe{width:100%;height:760px;border:0;display:block}
+  .book-note{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:20px;color:var(--muted);font-size:14.5px}
+  .book-note a{color:var(--navy);font-weight:700}
 
-  /* Tips */
-  .tips{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .tip{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column}
-  .tip-top{padding:30px 26px;background:linear-gradient(135deg,var(--sky-2),#b8e4f8);min-height:150px;display:flex;align-items:flex-end}
-  .tip-top h3{font-size:21px}
-  .tip-body{padding:22px 26px 26px;color:var(--muted);font-size:15px;flex:1;display:flex;flex-direction:column;gap:16px}
-  .link{font:600 15px Montserrat;color:var(--blue);display:inline-flex;align-items:center;gap:6px}
-  .socials{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+  /* tips */
+  .tips{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .tip{border-radius:24px;overflow:hidden;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;transition:.3s}
+  .tip:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+  .tip-top{padding:30px 28px;min-height:170px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(140deg,var(--sky-2),#cfe9f8)}
+  .tip-top span{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue)}
+  .tip-top h3{font-size:22px}
+  .tip.mind .tip-top{background:linear-gradient(140deg,#f6efe2,var(--gold-2))}
+  .tip.mind .tip-top span{color:#9a7535}
+  .tip-body{padding:22px 28px 28px;color:var(--muted);font-size:15px;flex:1;display:flex;flex-direction:column;gap:16px}
+  .link{font-weight:700;color:var(--navy);display:inline-flex;gap:6px;margin-top:auto}
 
-  /* FAQ */
-  .faq{max-width:860px}
-  details{border-bottom:1px solid var(--line);padding:22px 0}
-  summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font:600 19px Montserrat;color:var(--navy)}
+  /* faq */
+  .faq-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+  details{border-bottom:1px solid var(--line);padding:24px 0}
+  summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;font-weight:700;font-size:17.5px;color:var(--navy)}
   summary::-webkit-details-marker{display:none}
-  summary:after{content:"+";font-size:28px;color:var(--blue);font-weight:400}
+  summary:after{content:"+";font:400 30px/1 "Playfair Display";color:var(--gold)}
   details[open] summary:after{content:"–"}
   details p{margin-top:12px;color:var(--muted)}
 
-  /* Contact / footer */
-  .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
-  .contact-card{border-radius:var(--radius);background:var(--soft);padding:44px 40px}
-  .contact-list{list-style:none;margin-top:24px}
-  .contact-list li{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
-  .contact-list .qicon{width:48px;height:48px;background:#fff}
-  .contact-list .qicon svg{width:22px;height:22px}
-  .contact-list small{display:block;color:var(--muted);font-size:13px}
-  .contact-list b{font:600 16px Montserrat;color:var(--navy)}
-  .cta-card{border-radius:var(--radius);background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;padding:44px 40px;display:flex;flex-direction:column;justify-content:space-between;gap:28px}
-  .cta-card h3{color:#fff;font-size:30px}
-  .cta-card p{color:#dcecf7}
-  footer{background:var(--navy-2);color:#a9c3d8;padding:48px 0 32px;margin-top:96px;font-size:14px}
-  .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
-  .foot .logo-text b{color:#fff}
-  .foot .logo-text span{color:#a9c3d8}
-  .disclaimer{margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:13px}
-
-  /* Floating WhatsApp */
-  .wa{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.2)}
+  /* cta + footer */
+  .cta{position:relative;border-radius:36px;overflow:hidden;background:linear-gradient(120deg,rgba(7,31,55,.92),rgba(11,46,79,.75)),url(images/waiting-lounge.jpg) center/cover;color:#fff;padding:80px 64px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+  .cta h2{color:#fff;font-size:clamp(30px,3.6vw,46px);max-width:640px}
+  .cta p{color:#cfdeec;margin-top:12px}
+  footer{background:var(--navy-2);color:#a9bdd2;padding:80px 0 34px;margin-top:110px;font-size:15px}
+  .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+  footer .logo b{color:#fff}
+  footer .logo small{color:#8ea6be}
+  footer h4{color:#fff;font-size:15px;margin-bottom:16px;letter-spacing:.5px}
+  footer ul{list-style:none;display:grid;gap:10px}
+  footer a:hover{color:#fff}
+  .disclaimer{margin-top:56px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);font-size:13.5px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .wa{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 28px rgba(0,0,0,.25)}
   .wa svg{width:30px;height:30px}
 
-  /* Responsive */
-  @media (max-width:1020px){
+  /* responsive */
+  @media (max-width:1080px){
     .menu{display:none}
-    .menu.open{display:flex;position:absolute;top:78px;left:0;right:0;flex-direction:column;background:#fff;padding:20px 24px;border-bottom:1px solid var(--line);gap:18px}
+    .menu.open{display:flex;position:absolute;top:84px;left:0;right:0;flex-direction:column;background:#fff;padding:22px 28px;border-bottom:1px solid var(--line);gap:18px}
     .burger{display:grid;place-items:center}
-    .nav .btn-sky{display:none}
-    .hero-card{grid-template-columns:1fr}
-    .hero-copy{padding:48px 28px 24px}
-    .hero-photo{min-height:420px}
-    .hero-photo:before{background:linear-gradient(180deg,var(--navy) 0%,rgba(11,58,102,0) 30%)}
-    .quick{grid-template-columns:1fr 1fr}
-    .split,.plans,.contact-grid{grid-template-columns:1fr}
-    .services,.tips{grid-template-columns:1fr 1fr}
+    .nav .btn{display:none}
+    .hero .wrap,.counsel .wrap,.doctor .wrap,.faq-wrap{grid-template-columns:1fr}
+    .hero-copy{padding:64px 0 10px}
+    .hero-photo{height:520px}
+    .counsel-photo .quote{right:16px}
+    .services,.tips,.types{grid-template-columns:1fr 1fr}
+    .svc.star{grid-row:auto;grid-column:span 2}
     .steps{grid-template-columns:1fr 1fr}
+    .trust .wrap{grid-template-columns:1fr 1fr}
+    .trust div:nth-child(2){border-right:0}
+    .trust div{border-bottom:1px solid var(--line)}
+    .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:200px}
+    .g1{grid-column:span 2}.g5{grid-column:span 2}
+    .foot{grid-template-columns:1fr 1fr}
   }
   @media (max-width:640px){
     .wrap{padding:0 16px}
-    section{padding:64px 0}
-    .quick,.services,.tips,.steps{grid-template-columns:1fr}
-    .stats{grid-template-columns:1fr 1fr 1fr}
-    .booking{margin:0 12px;padding:40px 18px}
-    .plan,.contact-card,.cta-card{padding:32px 24px}
-    .cal-box iframe{height:900px}
-    .hero-actions .btn{width:100%;justify-content:center}
+    section{padding:76px 0}
+    .strip .hide-s{display:none}
+    .hero-photo{height:430px}
+    .hero-photo .frame{width:100%}
+    .f1{left:0;bottom:90px}.f2{right:0;bottom:16px}
+    .float{padding:12px 14px}
+    .hero-actions .btn{width:100%}
+    .concerns,.services,.tips,.types,.steps,.clinic-info{grid-template-columns:1fr}
+    .svc.star{grid-column:auto}
+    .doc-photos{height:440px}
+    .counsel-photo .quote{position:relative;right:auto;bottom:auto;margin:-50px 16px 0;max-width:none}
+    .gallery{grid-auto-rows:170px}
+    .cta{padding:48px 26px;border-radius:26px}
+    .foot{grid-template-columns:1fr}
+    .cal-box iframe{height:980px}
+    .pay-step{padding:40px 22px}
   }
 </style>
 </head>
 <body>
 
+<div class="strip">
+  <div class="wrap">
+    <span class="hide-s">Homoeo Home Speciality Clinic · Near Juma Masjid, Mannampara, Irumbuzhi, Malappuram</span>
+    <span>Appointments &amp; WhatsApp: <a href="tel:+917902558507">+91 79025 58507</a></span>
+  </div>
+</div>
+
 <header>
   <div class="wrap nav">
-    <a href="#top" class="logo" aria-label="Dr. Murshida K K home">
-      <span class="logo-mark">MK</span>
-      <span class="logo-text"><b>Dr. Murshida K K</b><span>Homoeo Home Speciality Clinic</span></span>
+    <a href="#top" class="logo" aria-label="Dr. Murshida K K — home">
+      <span class="logo-mark">M</span>
+      <span><b>Dr. Murshida K K</b><small>BHMS · MSc Psychology</small></span>
     </a>
     <nav class="menu" id="menu">
-      <a href="#about">About</a>
+      <a href="#counselling">Counselling</a>
       <a href="#services">Services</a>
-      <a href="#consult">Consultations</a>
-      <a href="#tips">Health tips</a>
-      <a href="#contact">Contact</a>
+      <a href="#doctor">About</a>
+      <a href="#clinic">Clinic</a>
+      <a href="#faq">FAQ</a>
       <a href="consult.html">Join video call</a>
     </nav>
-    <a href="#book" class="btn btn-sky">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
-      Book
-    </a>
+    <a href="#book" class="btn btn-navy">Book appointment</a>
     <button class="burger" aria-label="Open menu" onclick="document.getElementById('menu').classList.toggle('open')">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b3a66" stroke-width="2"><path d="M4 8h16M4 16h16"/></svg>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b2e4f" stroke-width="2"><path d="M4 8h16M4 16h16"/></svg>
     </button>
   </div>
 </header>
 
 <main id="top">
-  <!-- Hero -->
-  <div class="wrap hero">
-    <div class="hero-card">
+  <!-- HERO -->
+  <section class="hero" style="padding:0">
+    <div class="wrap">
       <div class="hero-copy">
-        <span class="eyebrow">Doctor · Psychologist · Nutrition Educator</span>
-        <h1>Expert care,<br>wherever you are,<br><em>today</em></h1>
-        <p>Homoeopathy, psychological counselling and nutrition guidance with Dr. Murshida K K — visit the clinic or consult face to face by video, right here on this website.</p>
+        <div class="cred"><span>Psychologist</span><span>Homoeopathic Physician</span><span>Nutrition Educator</span></div>
+        <h1>Healing for the <em>mind</em> and the body.</h1>
+        <p>Compassionate psychological counselling and homoeopathic care with Dr. Murshida K K — at our clinic in Malappuram or face to face by secure video, wherever you are.</p>
         <div class="hero-actions">
-          <a href="#book" class="btn btn-sky">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3"/></svg>
-            Book video consultation
+          <a href="#book" class="btn btn-gold" data-type="online-psychological-counselling">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z"/></svg>
+            Book counselling
           </a>
-          <a href="https://wa.me/917902558507" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp us</a>
+          <a href="#book" class="btn btn-line" data-type="online-video-consultation">Online consultation</a>
         </div>
       </div>
       <div class="hero-photo">
-        <img src="portrait.jpg" alt="Dr. Murshida K K at her clinic">
-        <div class="badge">
-          <span class="dot"></span>
-          <div><b>Dr. Murshida K K</b><span>Chief Consultant · Online &amp; in-clinic</span></div>
-        </div>
+        <div class="ring"></div>
+        <div class="frame"><div class="q q-tl" role="img" aria-label="Dr. Murshida K K"></div></div>
+        <div class="float f1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3"/></svg></span><div><b>Video consultations</b><small>Inside this website · no app</small></div></div>
+        <div class="float f2"><span class="ic" style="background:#f6efe2;color:#9a7535"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 5 5.6.8-4 3.9.9 5.6L12 14.6 7.1 17.3 8 11.7 4 7.8 9.6 7z"/></svg></span><div><b>BHMS · MSc Psychology</b><small>Chief Consultant</small></div></div>
       </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <div class="trust">
+    <div class="wrap">
+      <div><b>Mind &amp; Body</b><span>Counselling + homoeopathy together</span></div>
+      <div><b>Online</b><span>Secure video consults, pay by UPI</span></div>
+      <div><b>195+</b><span>Health videos shared in Malayalam</span></div>
+      <div><b>Mon – Sat</b><span>Clinic: 9:30–1 &amp; 3–7</span></div>
     </div>
   </div>
 
-  <!-- Quick actions -->
-  <section>
+  <!-- COUNSELLING FEATURE -->
+  <section class="counsel" id="counselling">
     <div class="wrap">
-      <h2 class="q-head">I would like to <em>consult the doctor</em></h2>
-      <div class="quick">
-        <a class="qcard" href="#book" data-type="online-video-consultation">
-          <span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3"/></svg></span>
-          <b>Book a video consultation</b>
-        </a>
-        <a class="qcard" href="#book" data-type="in-clinic-visit">
-          <span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6M12 8v4M10 10h4"/></svg></span>
-          <b>Visit the clinic</b>
-        </a>
-        <a class="qcard" href="consult.html">
-          <span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M10 8l6 4-6 4z"/></svg></span>
-          <b>Join my booked video call</b>
-        </a>
-        <a class="qcard" href="https://wa.me/917902558507" target="_blank" rel="noopener">
-          <span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.4A9 9 0 1 1 21 12z"/></svg></span>
-          <b>Ask a question on WhatsApp</b>
-        </a>
+      <div class="counsel-photo">
+        <div class="main"><div class="q q-tr" role="img" aria-label="Dr. Murshida K K in her consulting room"></div></div>
+        <div class="quote">“You don't have to carry it alone. Talking is the first step to feeling better.”<small>Dr. Murshida K K</small></div>
       </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section class="about" id="about">
-    <div class="wrap split">
-      <div class="about-img"><img src="portrait.jpg" alt="Dr. Murshida K K"></div>
       <div>
-        <span class="eyebrow" style="color:var(--blue)">Meet your doctor</span>
-        <h2 class="h2">Care for the body, the mind and everyday habits</h2>
-        <p class="lead">Dr. Murshida K K is a doctor, psychologist and nutrition educator, and the Chief Consultant at Dr Murshida's Homoeo Home Speciality Clinic. She combines homoeopathic treatment with counselling and practical diet guidance, so every consultation looks at the whole person.</p>
-        <p class="lead">Through her Malayalam health videos she helps families make sense of food, lifestyle and common health myths. At the clinic, lady doctor Dr. Saher Ibrahim also sees patients.</p>
-        <div class="stats">
-          <div class="stat"><b>195+</b><span>health videos shared</span></div>
-          <div class="stat"><b>30 min</b><span>online consultations</span></div>
-          <div class="stat"><b>2</b><span>languages: Malayalam &amp; English</span></div>
+        <span class="tag-feature">Featured service</span><br>
+        <span class="eyebrow">Psychological counselling</span>
+        <h2 class="h2">A safe, private space to talk — and to heal.</h2>
+        <p class="lead">With a Master's in Psychology, Dr. Murshida offers confidential one-to-one counselling for adults, students, couples and families. Sessions can be held at the clinic or online by video from the comfort of your home, in Malayalam or English.</p>
+        <div class="concerns">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Anxiety &amp; panic attacks</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Stress &amp; burnout</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Low mood &amp; depression</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Relationship &amp; family issues</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Student &amp; exam stress</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Sleep problems &amp; overthinking</div>
+        </div>
+        <div class="counsel-meta"><span><b>45 min</b> online session</span><span><b>100%</b> confidential</span><span><b>Malayalam</b> &amp; English</span></div>
+        <div class="hero-actions">
+          <a href="#book" class="btn btn-navy" data-type="online-psychological-counselling">Book a counselling session</a>
+          <a href="https://wa.me/917902558507?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20counselling%20sessions" target="_blank" rel="noopener" class="btn btn-ghost">Ask on WhatsApp</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
+  <!-- SERVICES -->
   <section id="services">
     <div class="wrap">
       <div class="sec-top">
-        <h2 class="h2" style="margin:0">Our services</h2>
-        <p>Personalised treatment plans, available at the clinic and through secure video consultations.</p>
+        <div><span class="eyebrow">What we treat</span><h2 class="h2" style="margin-bottom:0">Care that looks at the whole person</h2></div>
+        <p class="lead">Every plan is personal — combining counselling, homoeopathic treatment and practical lifestyle guidance.</p>
       </div>
       <div class="services">
-        <div class="svc"><span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 2v6l-5 9a3 3 0 0 0 2.6 4.5h8.8A3 3 0 0 0 19 17l-5-9V2M8 2h8M7 14h10"/></svg></span><h3>Homoeopathic consultation</h3><p>Gentle, individualised treatment for chronic and recurring complaints.</p></div>
-        <div class="svc"><span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z"/></svg></span><h3>Psychological counselling</h3><p>A safe space to talk through stress, anxiety, low mood and relationships.</p></div>
-        <div class="svc"><span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c4 3 6 6 6 9a6 6 0 0 1-12 0c0-3 2-6 6-9z"/><path d="M12 21v-8"/></svg></span><h3>Nutrition &amp; diet guidance</h3><p>Realistic eating plans for weight, cholesterol, anaemia and everyday energy.</p></div>
-        <div class="svc"><span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="5"/><path d="M12 13v8M9 18h6"/></svg></span><h3>Women's health</h3><p>Support for menstrual concerns, PCOS, pregnancy wellbeing and hormonal health.</p></div>
-        <div class="svc"><span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="7" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg></span><h3>Child health</h3><p>Care for frequent colds, allergies, appetite and growth concerns in children.</p></div>
-        <div class="svc"><span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 5 5.6.8-4 3.9.9 5.6L12 14.6 7.1 17.3 8 11.7 4 7.8 9.6 7z"/></svg></span><h3>Lifestyle &amp; skin concerns</h3><p>Help with acne, hair fall, sleep and habits that affect long-term health.</p></div>
+        <div class="svc star">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z"/></svg></span>
+          <h3>Psychological Counselling</h3>
+          <p>Evidence-based talk therapy by a qualified psychologist, at the clinic or online.</p>
+          <ul><li>Individual counselling</li><li>Couple &amp; family sessions</li><li>Teen &amp; student support</li><li>Panic &amp; anxiety management</li><li>Stress &amp; lifestyle coaching</li></ul>
+          <a href="#book" class="btn btn-gold" data-type="online-psychological-counselling">Book counselling</a>
+        </div>
+        <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 2v6l-5 9a3 3 0 0 0 2.6 4.5h8.8A3 3 0 0 0 19 17l-5-9V2M8 2h8M7 14h10"/></svg></span><h3>Homoeopathy</h3><p>Gentle, individualised treatment for chronic and recurring complaints.</p></div>
+        <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c4 3 6 6 6 9a6 6 0 0 1-12 0c0-3 2-6 6-9z"/><path d="M12 21v-8"/></svg></span><h3>Nutrition &amp; Diet</h3><p>Realistic eating plans for weight, cholesterol, sugar and anaemia.</p></div>
+        <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="5"/><path d="M12 13v8M9 18h6"/></svg></span><h3>Women's Health</h3><p>PCOD/PCOS, menstrual and hormonal concerns, pregnancy wellbeing.</p></div>
+        <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="7" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg></span><h3>Child Health</h3><p>Allergies, asthma, frequent colds, appetite and learning concerns.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Consultation types -->
-  <section class="consult" id="consult">
+  <!-- DOCTOR -->
+  <section class="doctor" id="doctor" style="background:linear-gradient(180deg,#fff,var(--cream))">
+    <div class="wrap">
+      <div class="doc-photos">
+        <div class="tall"><div class="q q-bl" role="img" aria-label="Dr. Murshida K K"></div></div>
+        <div class="s"><div class="q q-br" role="img" aria-label="Dr. Murshida K K"></div></div>
+        <div class="badge"><b>MSc</b><span>Psychology — plus BHMS in Homoeopathic Medicine</span></div>
+      </div>
+      <div>
+        <span class="eyebrow">Meet your doctor</span>
+        <h2 class="h2">Dr. Murshida K K</h2>
+        <p class="lead">Chief Consultant at Dr Murshida's Homoeo Home Speciality Clinic, Dr. Murshida brings together psychology, homoeopathy and nutrition so that every consultation looks at the mind, the body and everyday habits. Through her popular Malayalam health videos she helps thousands of families understand their health better.</p>
+        <div class="qual">
+          <div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span><span><b>BHMS · MSc Psychology</b><small>Qualified homoeopathic physician and psychologist</small></span></div>
+          <div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg></span><span><b>Chief Consultant</b><small>Homoeo Home Speciality Clinic, Irumbuzhi, Malappuram</small></span></div>
+          <div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/></svg></span><span><b>Health educator</b><small>195+ awareness videos on Instagram &amp; YouTube</small></span></div>
+        </div>
+        <a href="#book" class="btn btn-navy">Book with Dr. Murshida</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLINIC -->
+  <section class="clinic" id="clinic">
     <div class="wrap">
       <div class="sec-top">
-        <h2 class="h2" style="margin:0">Choose how you consult</h2>
-        <p>Both options are booked online in under a minute. No account or app needed.</p>
+        <div><span class="eyebrow">Our clinic</span><h2 class="h2" style="margin-bottom:0">Homoeo Home Speciality Clinic</h2></div>
+        <p class="lead">A calm, modern clinic designed to make every visit comfortable — from a welcoming lounge to a private consulting room.</p>
       </div>
-      <div class="plans">
-        <div class="plan video">
-          <span class="tag">Most popular</span>
-          <h3>Online video consultation</h3>
-          <div class="dur">30 minutes · from anywhere</div>
-          <ul>
-            <li>Face-to-face video call inside this website</li>
-            <li>No app, no sign-up — just your phone or laptop</li>
-            <li>Join link sent to your email as soon as you book</li>
-            <li>Prescriptions and diet plans shared digitally</li>
-          </ul>
-          <a href="#book" class="btn btn-sky" data-type="online-video-consultation">Book video consultation</a>
-        </div>
-        <div class="plan clinic">
-          <span class="tag">In person</span>
-          <h3>In-clinic visit</h3>
-          <div class="dur">Homoeo Home Speciality Clinic · Kerala</div>
-          <ul>
-            <li>Full examination at the clinic</li>
-            <li>Pick a time slot that suits you</li>
-            <li>Bring previous reports and prescriptions</li>
-            <li>Follow-ups can be done online</li>
-          </ul>
-          <a href="#book" class="btn btn-navy" data-type="in-clinic-visit">Book clinic visit</a>
-        </div>
+      <div class="gallery">
+        <figure class="g1"><img src="images/clinic-front.jpg" alt="Front of Homoeo Home Speciality Clinic" loading="lazy"><figcaption>Our clinic</figcaption></figure>
+        <figure class="g2"><img src="images/waiting-lounge.jpg" alt="Patient waiting lounge" loading="lazy"><figcaption>Waiting lounge</figcaption></figure>
+        <figure><img src="images/consulting-room.jpg" alt="Consulting room" loading="lazy"><figcaption>Consulting room</figcaption></figure>
+        <figure><img src="images/clinic-exterior-angle.jpg" alt="Clinic exterior" loading="lazy"></figure>
+        <figure class="g5"><img src="images/clinic-opening.jpg" alt="Clinic opening day" loading="lazy"><figcaption>Opening day</figcaption></figure>
+        <figure class="g5"><img src="images/clinic-exterior-low.jpg" alt="Clinic entrance" loading="lazy"></figure>
+      </div>
+      <div class="clinic-info">
+        <div><small>Location</small><b>Near Juma Masjid, Mannampara, Irumbuzhi, Malappuram</b><br><a href="https://www.google.com/maps/search/?api=1&query=Homoeo+Home+Speciality+Clinic+Irumbuzhi+Malappuram" target="_blank" rel="noopener">Get directions →</a></div>
+        <div><small>Clinic hours</small><b>Monday – Saturday</b><br>Morning 9:30 am – 1 pm<br>Evening 3 pm – 7 pm</div>
+        <div><small>Booking &amp; WhatsApp</small><b><a href="tel:+917902558507">+91 79025 58507</a></b><br><a href="https://wa.me/917902558507" target="_blank" rel="noopener">Chat on WhatsApp →</a></div>
       </div>
     </div>
   </section>
 
-  <!-- How it works -->
+  <!-- HOW IT WORKS -->
   <section id="how">
     <div class="wrap">
-      <h2 class="h2">How online consultation works</h2>
-      <p class="lead" style="margin-bottom:40px">Four simple steps — and the call happens right here on this website.</p>
+      <div class="sec-top">
+        <div><span class="eyebrow">Online consultation</span><h2 class="h2" style="margin-bottom:0">From booking to video call in minutes</h2></div>
+        <p class="lead">No app and no sign-up. The consultation happens right here on this website.</p>
+      </div>
       <div class="steps">
-        <div class="step"><h4>Choose a time</h4><p>Pick a 30-minute slot in the booking calendar below.</p></div>
-        <div class="step"><h4>Confirm your details</h4><p>Enter your name, email and WhatsApp number. No account needed.</p></div>
-        <div class="step"><h4>Get your join link</h4><p>We email you a link to the consultation room on this website.</p></div>
-        <div class="step"><h4>Meet the doctor</h4><p>At your time, open the link, allow camera and mic, and the doctor will let you in.</p></div>
+        <div class="step"><h4>Choose your session</h4><p>Pick counselling, an online consultation or a clinic visit, then a time that suits you.</p></div>
+        <div class="step"><h4>Pay securely</h4><p>Pay the consultation fee by Google Pay, PhonePe, any UPI app or card.</p></div>
+        <div class="step"><h4>Get your link</h4><p>Enter your WhatsApp number — your video consultation link is sent by WhatsApp and email.</p></div>
+        <div class="step"><h4>Meet the doctor</h4><p>Open the link at your time. You wait in a private room until the doctor lets you in.</p></div>
+      </div>
+      <div class="pay-row">Pay with <span>Google Pay</span><span>PhonePe</span><span>Paytm</span><span>Any UPI</span><span>Cards</span></div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="book" id="book">
+    <div class="wrap">
+      <div class="sec-top">
+        <div><span class="eyebrow">Book an appointment</span><h2 class="h2" style="margin-bottom:0">Choose your consultation</h2></div>
+        <p class="lead">Select the type of appointment, then pick a date and time.</p>
+      </div>
+      <div class="types">
+        <button class="type active" data-type="online-psychological-counselling">
+          <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z"/></svg></span><span class="pill">Featured</span></div>
+          <h3>Psychological Counselling</h3><p>Private one-to-one session by video.</p><div class="dur">45 minutes · Online</div>
+        </button>
+        <button class="type" data-type="online-video-consultation">
+          <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3"/></svg></span></div>
+          <h3>Online Consultation</h3><p>Homoeopathy &amp; nutrition by video.</p><div class="dur">30 minutes · Online</div>
+        </button>
+        <button class="type" data-type="in-clinic-visit">
+          <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg></span></div>
+          <h3>Clinic Visit</h3><p>In person at Irumbuzhi, Malappuram.</p><div class="dur">Mon – Sat · In clinic</div>
+        </button>
+      </div>
+      <div class="book-panel">
+        <div class="pay-step" id="payStep">
+          <span class="eyebrow" style="justify-content:center">Step 1 of 2 · Payment</span>
+          <h3>Pay the consultation fee</h3>
+          <p>Pay securely with Google Pay, PhonePe, any UPI app or card. After payment you'll be taken straight to the calendar to choose your time.</p>
+          <a id="payBtn" class="btn btn-gold" href="#">Pay &amp; continue</a>
+        </div>
+        <div class="cal-box" id="calBox">
+          <iframe id="calFrame" title="Booking calendar" src="about:blank" loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="book-note">
+        <span>Already booked a video consultation? <a href="consult.html">Enter the consultation room →</a></span>
+        <span>Prefer to call? <a href="tel:+917902558507">+91 79025 58507</a></span>
       </div>
     </div>
   </section>
 
-  <!-- Booking -->
-  <div class="booking" id="book">
-    <div class="wrap" style="padding:0">
-      <span class="eyebrow">Book an appointment</span>
-      <h2 class="h2">Pick a time that works for you</h2>
-      <p class="lead">Select the type of consultation, then choose a date and time.</p>
-      <div class="tabs" role="tablist">
-        <button class="tab active" data-type="online-video-consultation">Online video consultation · 30 min</button>
-        <button class="tab" data-type="in-clinic-visit">In-clinic visit</button>
-      </div>
-      <div class="cal-box">
-        <iframe id="calFrame" title="Booking calendar" src="https://cal.com/dr-mohammed-mirshad-7n1ksu/online-video-consultation?embed=true&theme=light" loading="lazy" allow="payment"></iframe>
-      </div>
-      <p class="call-note">Already booked a video consultation? <a href="consult.html">Enter the consultation room →</a> &nbsp;·&nbsp; Prefer to call? <a href="tel:+917902558507">+91 79025 58507</a></p>
-    </div>
-  </div>
-
-  <!-- Health tips -->
+  <!-- TIPS -->
   <section id="tips">
     <div class="wrap">
       <div class="sec-top">
-        <h2 class="h2" style="margin:0">Health library</h2>
-        <p>Short, practical videos in Malayalam on food, health myths and everyday wellbeing.</p>
+        <div><span class="eyebrow">Health library</span><h2 class="h2" style="margin-bottom:0">Learn with Dr. Murshida</h2></div>
+        <p class="lead">Short, practical videos in Malayalam on mental health, food and everyday wellbeing.</p>
       </div>
       <div class="tips">
-        <div class="tip"><div class="tip-top"><h3>Do flaxseeds really lower cholesterol?</h3></div><div class="tip-body">What the evidence says, and how much to eat for it to make a difference.<a class="link" href="https://instagram.com/dr.murshida_k.k" target="_blank" rel="noopener">Watch the video →</a></div></div>
-        <div class="tip"><div class="tip-top"><h3>Iron-rich foods, ranked</h3></div><div class="tip-body">Dates have about 1 mg of iron per 100 g — see which everyday foods do better.<a class="link" href="https://instagram.com/dr.murshida_k.k" target="_blank" rel="noopener">Watch the video →</a></div></div>
-        <div class="tip"><div class="tip-top"><h3>Is your lipstick safe?</h3></div><div class="tip-body">What to check on the label, and why some campuses are going lipstick-free.<a class="link" href="https://instagram.com/dr.murshida_k.k" target="_blank" rel="noopener">Watch the video →</a></div></div>
+        <div class="tip mind"><div class="tip-top"><span>Mental health</span><h3>Panic attacks — triggers and how to manage them</h3></div><div class="tip-body">Recognise the early signs of a panic attack and simple steps that help in the moment.<a class="link" href="https://instagram.com/homoeo.home.speciality.clinic" target="_blank" rel="noopener">Watch the video →</a></div></div>
+        <div class="tip"><div class="tip-top"><span>Women's health</span><h3>PCOD, PCOS and PMOS explained</h3></div><div class="tip-body">Why PCOS is more than an ovary problem, and what that means for treatment.<a class="link" href="https://instagram.com/dr.murshida_k.k" target="_blank" rel="noopener">Watch the video →</a></div></div>
+        <div class="tip"><div class="tip-top"><span>Nutrition</span><h3>Iron-rich foods, ranked</h3></div><div class="tip-body">Which everyday foods really help with anaemia — and which are overrated.<a class="link" href="https://instagram.com/dr.murshida_k.k" target="_blank" rel="noopener">Watch the video →</a></div></div>
       </div>
-      <div class="socials">
+      <div class="hero-actions" style="margin-top:34px">
         <a class="btn btn-navy" href="https://youtube.com/@drmandmofficial" target="_blank" rel="noopener">Watch on YouTube</a>
-        <a class="btn btn-sky" href="https://instagram.com/dr.murshida_k.k" target="_blank" rel="noopener">Follow on Instagram</a>
+        <a class="btn btn-ghost" href="https://instagram.com/dr.murshida_k.k" target="_blank" rel="noopener">Follow on Instagram</a>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="about" id="faq">
-    <div class="wrap">
-      <h2 class="h2">Frequently asked questions</h2>
-      <div class="faq">
-        <details open><summary>Do I need to create an account or install an app?</summary><p>No. You book with just your name, email and phone number, and the video call opens in your browser on this website. Just allow camera and microphone access when asked.</p></details>
-        <details><summary>How do I join my video consultation?</summary><p>After booking, you'll receive an email with a link to the consultation room on this website. At your appointment time, open the link, enter your name and wait — the doctor will let you in. You can also tap "Join video call" in the menu.</p></details>
-        <details><summary>How long is an online consultation?</summary><p>Each online video consultation is 30 minutes.</p></details>
+  <section id="faq" style="background:var(--cream)">
+    <div class="wrap faq-wrap">
+      <div>
+        <span class="eyebrow">FAQ</span>
+        <h2 class="h2">Questions, answered</h2>
+        <p class="lead">Can't find what you're looking for? Message us on WhatsApp and we'll help.</p>
+        <a href="https://wa.me/917902558507" target="_blank" rel="noopener" class="btn btn-navy" style="margin-top:26px">WhatsApp the clinic</a>
+      </div>
+      <div>
+        <details open><summary>Is counselling confidential?</summary><p>Yes. Everything you share in a counselling session stays between you and the doctor. Online sessions take place in a private video room that only you and the doctor can enter.</p></details>
+        <details><summary>How do I pay?</summary><p>You pay online when you book, using Google Pay, PhonePe, Paytm, any UPI app or a card. You receive a payment receipt straight away.</p></details>
+        <details><summary>How will I get the video consultation link?</summary><p>When you book, enter your WhatsApp number. Your link is sent by WhatsApp and email. At your appointment time, open it, enter your name and the doctor will let you in.</p></details>
+        <details><summary>Do I need an account or an app?</summary><p>No. The video call opens in your phone or laptop browser on this website — just allow camera and microphone access.</p></details>
         <details><summary>Which languages are consultations in?</summary><p>Malayalam and English.</p></details>
-        <details><summary>Can I get a prescription online?</summary><p>Yes. Where appropriate, prescriptions and diet plans are shared with you digitally after the consultation.</p></details>
-        <details><summary>Is online consultation suitable for emergencies?</summary><p>No. For a medical emergency, go to the nearest hospital or call emergency services immediately.</p></details>
+        <details><summary>Can I get a prescription online?</summary><p>Yes. Where appropriate, prescriptions and diet plans are shared with you after the consultation.</p></details>
+        <details><summary>Is online consultation suitable for emergencies?</summary><p>No. In a medical or mental health emergency, go to the nearest hospital or call emergency services immediately.</p></details>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <div class="wrap contact-grid">
-      <div class="contact-card">
-        <h2 class="h2" style="font-size:38px">Get in touch</h2>
-        <ul class="contact-list">
-          <li><span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div><small>Appointments</small><b><a href="tel:+917902558507">+91 79025 58507</a></b></div></li>
-          <li><span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.4A9 9 0 1 1 21 12z"/></svg></span><div><small>WhatsApp</small><b><a href="https://wa.me/917902558507" target="_blank" rel="noopener">Chat with the clinic</a></b></div></li>
-          <li><span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></span><div><small>Instagram</small><b><a href="https://instagram.com/dr.murshida_k.k" target="_blank" rel="noopener">@dr.murshida_k.k</a> · <a href="https://instagram.com/homoeo.home.speciality.clinic" target="_blank" rel="noopener">@homoeo.home.speciality.clinic</a></b></div></li>
-          <li><span class="qicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small>Clinic</small><b>Dr Murshida's Homoeo Home Speciality Clinic, Kerala</b></div></li>
-        </ul>
-      </div>
-      <div class="cta-card">
-        <div>
-          <span class="eyebrow">Ready when you are</span>
-          <h3>Start your consultation today</h3>
-          <p style="margin-top:12px">Book a 30-minute video call or a clinic visit in under a minute.</p>
-        </div>
-        <a href="#book" class="btn btn-sky" style="align-self:flex-start">Book now</a>
-      </div>
+  <!-- CTA -->
+  <div class="wrap" style="margin-top:110px">
+    <div class="cta">
+      <div><h2>Take the first step towards feeling better.</h2><p>Book a counselling session or consultation in under a minute.</p></div>
+      <a href="#book" class="btn btn-gold">Book an appointment</a>
     </div>
-  </section>
+  </div>
 </main>
 
 <footer>
   <div class="wrap">
     <div class="foot">
-      <div class="logo"><span class="logo-mark" style="background:var(--blue)">MK</span><span class="logo-text"><b>Dr. Murshida K K</b><span>Homoeo Home Speciality Clinic</span></span></div>
-      <div>© <span id="yr"></span> Dr. Murshida K K. All rights reserved.</div>
+      <div>
+        <div class="logo"><span class="logo-mark" style="background:var(--navy-3)">M</span><span><b>Dr. Murshida K K</b><small>BHMS · MSc Psychology</small></span></div>
+        <p style="margin-top:18px;max-width:320px">Psychological counselling, homoeopathy and nutrition guidance — in clinic and online.</p>
+      </div>
+      <div><h4>Visit</h4><ul><li>Homoeo Home Speciality Clinic</li><li>Near Juma Masjid, Mannampara</li><li>Irumbuzhi, Malappuram</li><li>Mon – Sat · 9:30–1 &amp; 3–7</li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+917902558507">+91 79025 58507</a></li><li><a href="https://wa.me/917902558507" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="consult.html">Join video call</a></li></ul></div>
+      <div><h4>Follow</h4><ul><li><a href="https://instagram.com/dr.murshida_k.k" target="_blank" rel="noopener">@dr.murshida_k.k</a></li><li><a href="https://instagram.com/homoeo.home.speciality.clinic" target="_blank" rel="noopener">@homoeo.home.speciality.clinic</a></li><li><a href="https://youtube.com/@drmandmofficial" target="_blank" rel="noopener">YouTube</a></li></ul></div>
     </div>
-    <p class="disclaimer">Online consultations are not a substitute for emergency care. In an emergency, contact your nearest hospital immediately.</p>
+    <div class="disclaimer"><span>© <span id="yr"></span> Dr. Murshida K K. All rights reserved.</span><span>Online consultations are not for emergencies. In an emergency, contact your nearest hospital.</span></div>
   </div>
 </footer>
 
-<a class="wa" href="https://wa.me/917902558507" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a class="wa" href="https://wa.me/917902558507" target="_blank" rel="noopener" aria-label="WhatsApp the clinic">
   <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>
 </a>
 
 <script>
+  /* ---------- BOOKING SETTINGS ----------
+     PAY: payment link for each type (Razorpay Payment Page). Leave '' to skip payment.
+     After payment, set the Razorpay redirect URL to: https://www.drmurshidakk.com/book.html?type=<type>
+  --------------------------------------- */
+  const CAL = 'https://cal.com/dr-mohammed-mirshad-7n1ksu/';
+  const PAY = {
+    'online-psychological-counselling': '',
+    'online-video-consultation': '',
+    'in-clinic-visit': ''
+  };
   document.getElementById('yr').textContent = new Date().getFullYear();
-  const base = 'https://cal.com/dr-mohammed-mirshad-7n1ksu/';
-  const frame = document.getElementById('calFrame');
-  const tabs = document.querySelectorAll('.tab');
+  const frame = document.getElementById('calFrame'), calBox = document.getElementById('calBox');
+  const payStep = document.getElementById('payStep'), payBtn = document.getElementById('payBtn');
   function selectType(type){
-    frame.src = base + type + '?embed=true&theme=light';
-    tabs.forEach(t => t.classList.toggle('active', t.dataset.type === type));
+    document.querySelectorAll('.type').forEach(t => t.classList.toggle('active', t.dataset.type === type));
+    if (PAY[type]) {
+      payBtn.href = PAY[type]; payStep.classList.add('show'); calBox.style.display = 'none'; frame.src = 'about:blank';
+    } else {
+      payStep.classList.remove('show'); calBox.style.display = 'block';
+      frame.src = CAL + type + '?embed=true&theme=light';
+    }
   }
-  tabs.forEach(t => t.addEventListener('click', () => selectType(t.dataset.type)));
+  document.querySelectorAll('.type').forEach(t => t.addEventListener('click', () => selectType(t.dataset.type)));
   document.querySelectorAll('a[data-type]').forEach(a => a.addEventListener('click', () => selectType(a.dataset.type)));
   document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => document.getElementById('menu').classList.remove('open')));
+  selectType('online-psychological-counselling');
 </script>
 </body>
 </html>

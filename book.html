@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Choose Your Time | Dr. Murshida K K</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0b2e4f;--navy-2:#071f37;--gold:#c9a463;--gold-2:#e8d3a8;--cream:#faf7f2;--muted:#5d6b7b;--line:#e5ebf1}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Manrope,system-ui,sans-serif;background:var(--cream);color:#1b2a3a}
+  a{color:inherit;text-decoration:none}
+  header{background:#fff;border-bottom:1px solid var(--line)}
+  .nav{max-width:1100px;margin:0 auto;padding:0 20px;height:76px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:flex;align-items:center;gap:12px}
+  .mark{width:42px;height:42px;border-radius:13px;background:var(--navy);color:var(--gold-2);display:grid;place-items:center;font:600 20px "Playfair Display"}
+  .logo b{display:block;font:600 17px "Playfair Display";color:var(--navy)}
+  .logo small{font-size:12px;color:var(--muted)}
+  main{max-width:1100px;margin:0 auto;padding:36px 20px 60px}
+  .ok{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid #d9eedd;border-radius:20px;padding:20px 24px;margin-bottom:22px}
+  .ok .ic{width:46px;height:46px;border-radius:50%;background:#e6f6ea;color:#1e8e3e;display:grid;place-items:center;flex:none}
+  h1{font:600 clamp(26px,3vw,36px) "Playfair Display";color:var(--navy)}
+  .ok p{color:var(--muted);font-size:15px}
+  .panel{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px -24px rgba(11,46,79,.25)}
+  iframe{width:100%;height:780px;border:0;display:block}
+  .note{margin-top:16px;color:var(--muted);font-size:14.5px}
+  .note a{color:var(--navy);font-weight:700}
+  @media (max-width:640px){iframe{height:1000px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><a href="index.html" class="logo"><span class="mark">M</span><span><b>Dr. Murshida K K</b><small>BHMS · MSc Psychology</small></span></a><a href="index.html" style="font-weight:700;color:var(--navy)">← Back to website</a></div></header>
+<main>
+  <div class="ok">
+    <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></span>
+    <div><h1>Payment received — thank you</h1><p>Step 2 of 2: choose your date and time below. Please enter your WhatsApp number so we can send your consultation link.</p></div>
+  </div>
+  <div class="panel"><iframe id="calFrame" title="Booking calendar"></iframe></div>
+  <p class="note">Need help? WhatsApp <a href="https://wa.me/917902558507" target="_blank" rel="noopener">+91 79025 58507</a></p>
+</main>
+<script>
+  const allowed = ['online-psychological-counselling','online-video-consultation','in-clinic-visit'];
+  let type = new URLSearchParams(location.search).get('type');
+  if (!allowed.includes(type)) type = 'online-video-consultation';
+  document.getElementById('calFrame').src = 'https://cal.com/dr-mohammed-mirshad-7n1ksu/' + type + '?embed=true&theme=light';
+</script>
+</body>
+</html>
