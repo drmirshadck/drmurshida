@@ -396,6 +396,9 @@
     .nav{height:76px}
     .logo b{font-size:15px}
   }
+  .credit{margin-top:18px;text-align:center;font-size:13px;color:#8ea6be}
+  .credit a{color:#fff;font-weight:600}
+  .credit a:hover{color:var(--sky)}
 </style>
 </head>
 <body>
@@ -599,7 +602,7 @@
         </button>
         <button class="type" data-type="online-video-consultation">
           <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3"/></svg></span></div>
-          <h3>Online Consultation</h3><p>Homoeopathy &amp; nutrition by video.</p><div class="dur">30 minutes · Online · <span class="fee">₹300</span></div><p class="fee-note">Consultation fee only — medicines charged separately</p>
+          <h3>Online Consultation</h3><p>Homoeopathy &amp; nutrition by video.</p><div class="dur">20 minutes · Online · <span class="fee">₹400</span></div><p class="fee-note">Consultation fee only — medicines charged separately</p>
         </button>
         <button class="type" data-type="in-clinic-visit">
           <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg></span></div>
@@ -667,11 +670,11 @@
         <a href="https://wa.me/917902558507" target="_blank" rel="noopener" class="btn btn-navy" style="margin-top:26px">WhatsApp the clinic</a>
       </div>
       <div>
-        <details open><summary>Is counselling confidential?</summary><p>Yes. Everything you share in a counselling session stays between you and the doctor. Online sessions take place in a private video room that only you and the doctor can enter.</p></details>
+        <details open><summary>Is counselling confidential?</summary><p>Yes. Everything you share in a counselling session stays between you and the doctor. Online sessions take place in a private video room on this website that only you and the doctor can enter.</p></details>
         <details><summary>How do I pay?</summary><p>Online sessions are paid by UPI when you book — scan the QR code (or copy the UPI ID) with Google Pay, PhonePe, Paytm or any UPI app, then enter the 12-digit UPI transaction ID (UTR) in the booking form. We verify the payment and confirm your booking, usually within a few hours. Clinic visits are paid at the clinic.</p></details>
         <details><summary>What if my payment can't be verified?</summary><p>If we can't match your UTR to a payment, we'll contact you on WhatsApp before cancelling. For refunds or changes, message the clinic on WhatsApp.</p></details>
-        <details><summary>How will I get the video consultation link?</summary><p>When you book, enter your WhatsApp number. Your link is sent by WhatsApp and email. At your appointment time, open it, enter your name and the doctor will let you in.</p></details>
-        <details><summary>Do I need an account or an app?</summary><p>No. The video call opens in your phone or laptop browser on this website — just allow camera and microphone access.</p></details>
+        <details><summary>How will I get the video consultation link?</summary><p>When you book, enter your WhatsApp number and email. Once your payment is verified, your link to the consultation room on this website is sent by email and WhatsApp. At your time, open it, enter your name and the doctor will let you in.</p></details>
+        <details><summary>Do I need an account or an app?</summary><p>No. The video call opens in your phone or laptop browser right here on this website — just allow camera and microphone access.</p></details>
         <details><summary>Which languages are consultations in?</summary><p>Malayalam and English.</p></details>
         <details><summary>Can I get a prescription online?</summary><p>Yes. Where appropriate, prescriptions and diet plans are shared with you after the consultation.</p></details>
         <details><summary>Is online consultation suitable for emergencies?</summary><p>No. In a medical or mental health emergency, go to the nearest hospital or call emergency services immediately.</p></details>
@@ -700,6 +703,7 @@
       <div><h4>Follow</h4><ul><li><a href="https://instagram.com/dr.murshida_k.k" target="_blank" rel="noopener">@dr.murshida_k.k</a></li><li><a href="https://instagram.com/homoeo.home.speciality.clinic" target="_blank" rel="noopener">@homoeo.home.speciality.clinic</a></li><li><a href="https://youtube.com/@drmandmofficial" target="_blank" rel="noopener">YouTube</a></li></ul></div>
     </div>
     <div class="disclaimer"><span>© <span id="yr"></span> Dr. Murshida K K. All rights reserved.</span><span>Online consultations are not for emergencies. In an emergency, contact your nearest hospital.</span></div>
+    <p class="credit">Developed by <a href="https://www.arshees.com" target="_blank" rel="noopener">DotCom by Arshees</a></p>
   </div>
 </footer>
 
@@ -718,7 +722,7 @@
   const UPI_NAME = 'Murshida K K';
   const FEES = {
     'online-psychological-counselling': 1000,
-    'online-video-consultation': 300,
+    'online-video-consultation': 400,
     'in-clinic-visit': 0
   };
   const CAL = 'https://cal.com/dr-mohammed-mirshad-7n1ksu/';
