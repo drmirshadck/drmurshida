@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consultation Room | Dr. Murshida K K</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0b3a66;--navy-2:#062a4c;--blue:#0a9ad7;--sky:#8fd3f4;--sky-2:#d9f1fc;--muted:#5b6b7c;--line:#e3ebf2}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,sans-serif;background:#f4f9fc;color:#1d2b3a;min-height:100vh;display:flex;flex-direction:column}
+  a{color:inherit;text-decoration:none}
+  header{background:#fff;border-bottom:1px solid var(--line)}
+  .nav{max-width:1200px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo-mark{width:40px;height:40px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-items:center;font:700 15px Montserrat}
+  .logo b{display:block;font:700 16px Montserrat;color:var(--navy)}
+  .logo span{font-size:12px;color:var(--muted)}
+  .back{font:600 14px Montserrat;color:var(--navy);border:1px solid var(--line);padding:10px 18px;border-radius:999px;background:#fff}
+  main{flex:1;max-width:1200px;width:100%;margin:0 auto;padding:24px}
+  .panel{background:#fff;border-radius:24px;border:1px solid var(--line);overflow:hidden}
+  .intro{display:grid;grid-template-columns:1.1fr .9fr;min-height:540px}
+  .intro-copy{padding:56px 48px}
+  .eyebrow{font:600 13px Montserrat;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue)}
+  h1{font:800 clamp(30px,4vw,44px) Montserrat;color:var(--navy);margin:14px 0 16px;line-height:1.15}
+  p.lead{color:var(--muted);font-size:17px;margin-bottom:28px}
+  label{display:block;font:600 14px Montserrat;color:var(--navy);margin-bottom:8px}
+  input{width:100%;font:16px Inter;padding:15px 18px;border:1px solid var(--line);border-radius:14px;margin-bottom:18px;background:#f9fcfe}
+  input:focus{outline:2px solid var(--sky);border-color:var(--sky)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;cursor:pointer;font:600 16px Montserrat;border-radius:999px;padding:16px 30px;background:var(--navy);color:#fff;width:100%}
+  .btn:hover{background:var(--navy-2)}
+  .btn:disabled{opacity:.6;cursor:wait}
+  .checks{list-style:none;margin-top:28px;display:grid;gap:10px;color:var(--muted);font-size:15px}
+  .checks li{padding-left:28px;position:relative}
+  .checks li:before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:700}
+  .intro-side{background:linear-gradient(135deg,var(--navy-2),var(--navy) 55%,#0e6aa5);color:#dcecf7;padding:56px 44px;display:flex;flex-direction:column;justify-content:center;gap:22px}
+  .intro-side h2{font:700 24px Montserrat;color:#fff}
+  .doc{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.1);border-radius:18px;padding:16px}
+  .doc img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center 20%}
+  .doc b{display:block;color:#fff;font:700 16px Montserrat}
+  .side-steps{list-style:none;display:grid;gap:14px;counter-reset:s}
+  .side-steps li{padding-left:44px;position:relative}
+  .side-steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--sky);color:var(--navy);display:grid;place-items:center;font:700 14px Montserrat}
+  #callWrap{display:none;height:calc(100vh - 72px - 48px);min-height:520px}
+  #callWrap iframe{width:100%;height:100%;border:0}
+  .note{margin-top:16px;text-align:center;color:var(--muted);font-size:14px}
+  .note a{color:var(--blue);font-weight:600}
+  .err{display:none;margin-bottom:18px;padding:14px 16px;border-radius:14px;background:#fff4e5;color:#7a4b00;font-size:15px}
+  @media (max-width:900px){
+    .intro{grid-template-columns:1fr}
+    .intro-copy,.intro-side{padding:36px 24px}
+    main{padding:12px}
+    #callWrap{height:calc(100vh - 72px - 24px)}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a href="index.html" class="logo"><span class="logo-mark">MK</span><span><b>Dr. Murshida K K</b><span>Consultation room</span></span></a>
+    <a href="index.html" class="back" id="backLink">← Back to website</a>
+  </div>
+</header>
+
+<main>
+  <div class="panel" id="introPanel">
+    <div class="intro">
+      <div class="intro-copy">
+        <span class="eyebrow" id="roleTag">Online video consultation</span>
+        <h1 id="title">Join your consultation</h1>
+        <p class="lead" id="sub">Enter your name and tap join. The doctor will let you in at your appointment time. The call stays right here on this page.</p>
+        <div class="err" id="err"></div>
+        <form id="joinForm">
+          <label for="name">Your full name</label>
+          <input id="name" required placeholder="e.g. Fathima Rahman" autocomplete="name">
+          <button class="btn" id="joinBtn" type="submit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10l6-3v10l-6-3"/></svg>
+            Join video call
+          </button>
+        </form>
+        <ul class="checks">
+          <li>Use a phone or laptop with a camera, in a quiet place</li>
+          <li>Allow camera and microphone when your browser asks</li>
+          <li>Keep previous reports and prescriptions nearby</li>
+        </ul>
+      </div>
+      <div class="intro-side">
+        <div class="doc"><img src="portrait.jpg" alt="Dr. Murshida K K"><div><b>Dr. Murshida K K</b>Chief Consultant · 30-minute consultation</div></div>
+        <h2>What happens next</h2>
+        <ol class="side-steps">
+          <li>You'll check your camera and microphone</li>
+          <li>You wait briefly in the waiting room</li>
+          <li>The doctor admits you and the consultation begins</li>
+        </ol>
+        <p style="font-size:14px">Trouble joining? WhatsApp <a href="https://wa.me/917902558507" target="_blank" rel="noopener" style="color:var(--sky);font-weight:600">+91 79025 58507</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" id="callWrap"></div>
+  <p class="note" id="noBook">Don't have an appointment yet? <a href="index.html#book">Book a 30-minute video consultation</a></p>
+</main>
+
+<script src="https://unpkg.com/@daily-co/daily-js"></script>
+<script>
+  /* ---------- SETTINGS ----------
+     ROOM_URL: the Daily room for consultations (created in the Daily dashboard).
+     The doctor joins with her private link: consult.html?host=<owner token>
+  -------------------------------- */
+  const ROOM_URL = 'https://YOUR-SUBDOMAIN.daily.co/consultation';
+
+  const params = new URLSearchParams(location.search);
+  const hostToken = params.get('host');
+  const isHost = !!hostToken;
+  const nameInput = document.getElementById('name');
+  const err = document.getElementById('err');
+
+  if (isHost) {
+    document.getElementById('roleTag').textContent = 'Doctor login';
+    document.getElementById('title').textContent = 'Start consultations';
+    document.getElementById('sub').textContent = 'You join as the host. Patients wait in the waiting room until you admit them.';
+    nameInput.value = 'Dr. Murshida K K';
+    document.getElementById('noBook').style.display = 'none';
+  }
+  try { const saved = localStorage.getItem('patientName'); if (saved && !isHost) nameInput.value = saved; } catch (e) {}
+
+  document.getElementById('joinForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    err.style.display = 'none';
+    const userName = nameInput.value.trim();
+    if (!userName) return;
+    if (ROOM_URL.includes('YOUR-SUBDOMAIN')) {
+      err.textContent = 'The consultation room is being set up. Please contact the clinic on WhatsApp.';
+      err.style.display = 'block';
+      return;
+    }
+    try { if (!isHost) localStorage.setItem('patientName', userName); } catch (e) {}
+    const btn = document.getElementById('joinBtn');
+    btn.disabled = true;
+
+    const wrap = document.getElementById('callWrap');
+    document.getElementById('introPanel').style.display = 'none';
+    document.getElementById('noBook').style.display = 'none';
+    wrap.style.display = 'block';
+    window.scrollTo(0, 0);
+
+    const call = window.DailyIframe.createFrame(wrap, {
+      showLeaveButton: true,
+      showFullscreenButton: true,
+      iframeStyle: { width: '100%', height: '100%', border: '0' },
+      theme: { colors: { accent: '#0a9ad7', accentText: '#FFFFFF', background: '#062a4c', backgroundAccent: '#0b3a66', baseText: '#FFFFFF', border: '#0e6aa5', mainAreaBg: '#062a4c', mainAreaBgAccent: '#0b3a66', mainAreaText: '#FFFFFF', supportiveText: '#cfe3f1' } }
+    });
+    call.on('left-meeting', () => { call.destroy(); location.href = 'index.html'; });
+    call.on('error', (ev) => {
+      call.destroy();
+      wrap.style.display = 'none';
+      document.getElementById('introPanel').style.display = 'block';
+      btn.disabled = false;
+      err.textContent = 'Could not connect to the consultation room. Please check your internet connection and try again, or WhatsApp the clinic.';
+      err.style.display = 'block';
+    });
+    const opts = { url: ROOM_URL, userName };
+    if (isHost) opts.token = hostToken;
+    call.join(opts);
+  });
+</script>
+</body>
+</html>
