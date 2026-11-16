@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /consult.html
+Disallow: /book.html
+
+Sitemap: https://www.drmurshidakk.com/sitemap.xml
